@@ -1,277 +1,278 @@
 {
-	"info": {
-		"_postman_id": "10d7aea0-abc1-40ce-b5c1-e1a746d1a631",
-		"name": "Agent Callbacks",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "37951187",
-		"_collection_link": "https://sunbird-vm.postman.co/workspace/Dhiway~48b8ac45-26e8-4086-a72a-b05051b832cc/collection/37951187-10d7aea0-abc1-40ce-b5c1-e1a746d1a631?action=share&source=collection_link&creator=37951187"
-	},
-	"item": [
-		{
-			"name": "profile",
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "{{API_KEY}}",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "x-api-key",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"101\",\n    \"title\": \"Generic ITI profile schema\",\n    \"properties\": {\n        \"whatIHave\": {\n            \"age\": 26,\n            \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n            \"itiSpecialization\": [\n                \"Additive Manufacturing Technician Three D Painting\"\n            ]\n        },\n        \"whoIAm\": {\n            \"name\": \"ashwindhiwaytest\",\n            \"phone\": \"919645640108\"\n        }\n    }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BASE_URL}}/api/v1/agent/profile/callback",
-					"host": [
-						"{{BASE_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"agent",
-						"profile",
-						"callback"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "profile",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"101\",\n    \"title\": \"Generic ITI profile schema\",\n    \"properties\": {\n        \"whatIHave\": {\n            \"age\": 26,\n            \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n            \"itiSpecialization\": [\n                \"Additive Manufacturing Technician Three D Painting\"\n            ]\n        },\n        \"whoIAm\": {\n            \"name\": \"ashwindhiwaytest\",\n            \"phone\": \"919645640108\"\n        }\n    }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE_URL}}/api/v1/agent/profile/callback",
-							"host": [
-								"{{BASE_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"agent",
-								"profile",
-								"callback"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "1291"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"50b-1t/2wsgZhNJGKolkd5H/4CqxufM\""
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 15 Jan 2026 10:53:50 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 87,\n        \"metadata\": {\n            \"name\": \"ashwindhiwaytest\",\n            \"role\": \"ITI (Other)\",\n            \"gender\": \"\",\n            \"whoIAm\": {\n                \"name\": \"ashwindhiwaytest\",\n                \"phone\": \"+919645640108\",\n                \"gender\": \"\",\n                \"hometown\": \"\",\n                \"location\": \"\",\n                \"fatherName\": \"\",\n                \"motherName\": \"\",\n                \"dateOfBirth\": \"\",\n                \"aadharNumber\": \"\",\n                \"locationData\": {\n                    \"city\": \"\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"\"\n                },\n                \"isAgeVerified\": false,\n                \"isNameVerified\": false,\n                \"currentLocation\": \"\",\n                \"desiredLocation\": \"\",\n                \"isPhoneVerified\": false,\n                \"isLocationVerified\": false\n            },\n            \"agentId\": \"101\",\n            \"hometown\": \"\",\n            \"industry\": \"\",\n            \"education\": [],\n            \"whatIHave\": {\n                \"age\": 26,\n                \"rollNumber\": \"\",\n                \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n                \"isAgeVerified\": false,\n                \"languageSpoken\": [],\n                \"previousCompany\": \"\",\n                \"skillProofVideo\": \"\",\n                \"machinesOperated\": [],\n                \"previousLocation\": null,\n                \"trainingDuration\": null,\n                \"itiSpecialization\": [\n                    \"Additive Manufacturing Technician Three D Painting\"\n                ],\n                \"qualityProofImage\": \"\",\n                \"currentMonthlySalary\": null,\n                \"highestQualification\": [],\n                \"fitterAssessmentScore\": null,\n                \"intentAssessmentScore\": null,\n                \"totalYearsOfExperience\": null\n            },\n            \"whatIWant\": {\n                \"monthlyPFESIC\": null,\n                \"workHoursPerDay\": null,\n                \"preferredModeOfWork\": [],\n                \"monthlyOTExpectation\": null,\n                \"monthlyInHandPreferred\": null\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Generic ITI profile schema\",\n        \"createdAt\": \"2026-01-15T10:53:50.569Z\",\n        \"updatedAt\": \"2026-01-15T10:53:50.569Z\"\n    }\n}"
-				}
-			]
-		},
-		{
-			"name": "job",
-			"request": {
-				"auth": {
-					"type": "apikey",
-					"apikey": [
-						{
-							"key": "value",
-							"value": "{{API_KEY}}",
-							"type": "string"
-						},
-						{
-							"key": "key",
-							"value": "x-api-key",
-							"type": "string"
-						}
-					]
-				},
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n      // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n  \"agentId\": 201,\n  \"name\": \"abc\",\n  \"phoneNumber\": \"+919645640108\",\n  \"jobProviderName\": \"ABC COMPANY\",\n  \"title\": \"Electrician\",\n  \"positions\": 98,\n  \"monthly_salary\": 70000,\n  \"location\": \"BENGALURE\",\n  \"job_roles\": {\n    \"fitter\": 89\n  }\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "{{BASE_URL}}/api/v1/agent/job/callback",
-					"host": [
-						"{{BASE_URL}}"
-					],
-					"path": [
-						"api",
-						"v1",
-						"agent",
-						"job",
-						"callback"
-					]
-				}
-			},
-			"response": [
-				{
-					"name": "job",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n      // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n  \"agentId\": 201,\n  \"name\": \"abc\",\n  \"phoneNumber\": \"+919645640108\",\n  \"jobProviderName\": \"ABC COMPANY\",\n  \"title\": \"Electrician\",\n  \"positions\": 98,\n  \"monthly_salary\": 70000,\n  \"location\": \"BENGALURE\",\n  \"job_roles\": {\n    \"fitter\": 89\n  }\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{BASE_URL}}/api/v1/agent/job/callback",
-							"host": [
-								"{{BASE_URL}}"
-							],
-							"path": [
-								"api",
-								"v1",
-								"agent",
-								"job",
-								"callback"
-							]
-						}
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "*"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "693"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"2b5-PfUuY7fqgrMJa1Rz5Fm9u4AgBT0\""
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 15 Jan 2026 11:21:05 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 53,\n        \"metadata\": {\n            \"role\": \"Electrician\",\n            \"status\": \"open\",\n            \"agentId\": 201,\n            \"jobNeeds\": {\n                \"ageAllowedLowerLimit\": null,\n                \"ageAllowedUpperLimit\": null\n            },\n            \"basicInfo\": {\n                \"jobProviderName\": \"ABC COMPANY\",\n                \"jobProviderLocation\": {\n                    \"gps\": null,\n                    \"tag\": \"BENGALURE\",\n                    \"city\": \"BENGALURE\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"India\"\n                }\n            },\n            \"agentTitle\": \"Electrician\",\n            \"jobDetails\": {\n                \"title\": \"Electrician\",\n                \"positions\": 98,\n                \"maxMonthlyInHand\": 70000,\n                \"minMonthlyInHand\": 70000\n            },\n            \"jobProviderLocation\": {\n                \"gps\": null,\n                \"tag\": \"BENGALURE\",\n                \"city\": \"BENGALURE\",\n                \"state\": \"\",\n                \"address\": \"\",\n                \"country\": \"India\"\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Electrician\",\n        \"createdAt\": \"2026-01-15T11:21:05.632Z\",\n        \"updatedAt\": \"2026-01-15T11:21:05.632Z\"\n    }\n}"
-				}
-			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"requests": {},
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"type": "text/javascript",
-				"packages": {},
-				"requests": {},
-				"exec": [
-					""
-				]
-			}
-		}
-	],
-	"variable": [
-		{
-			"key": "API_KEY",
-			"value": ""
-		},
-		{
-			"key": "BASE_URL",
-			"value": ""
-		},
-		{
-			"key": "BASE_URL",
-			"value": ""
-		}
-	]
+  "info": {
+    "_postman_id": "10d7aea0-abc1-40ce-b5c1-e1a746d1a631",
+    "name": "Agent Callbacks",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37951187",
+    "_collection_link": "https://go.postman.co/collection/37951187-10d7aea0-abc1-40ce-b5c1-e1a746d1a631?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "profile",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"100\",\n    \"role\": \"Fitter\",\n    \"whoIAm\": {\n        \"name\": \"Ashwin Raj ck\",\n        \"gender\": \"Male\",\n        \"location\": \"Bengaluru, Karnataka\",\n        \"phone\": \"919645640108\",\n        \"age\": 26\n    },\n    \"whatIHave\": {\n        \"workExperience\": \"Worked before\",\n        \"workExperienceYearsConditional\": [\n            \"3-5 Years\"\n        ],\n        \"highestQualificationOrSkill\": {\n            \"category\": \"College\",\n            \"subCategory\": \"Bachelor of Engineering\"\n        },\n        \"workExperienceYears\": \"3-5 Years\",\n        \"nameOfLastRoleHeld\": \"Software Engineer\"\n    },\n    \"whatIWant\": {\n        \"natureOfJobsInterestedIn\": [\n            \"Full-time\",\n            \"Flexible\"\n        ],\n        \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\",\n        \"otherHelpNeeded\": [\n            \"Training\"\n        ]\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "agent",
+            "profile",
+            "callback"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "profile",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    // \"agentId\": \"101\",\n\n  \"role\":\"Fitter\",\n  \"whoIAm\": {\n    \"name\": \"Ashwin Raj ck\",\n    \"gender\": \"Male\",\n    \"location\": \"Bengaluru, Karnataka\",\n    \"phone\": \"919645640108\",\n    \"age\": 26\n  },\n  \"whatIHave\": {\n    \"workExperience\": \"Worked before\",\n    \"workExperienceYearsConditional\": [\"3-5 Years\"],\n    \"highestQualificationOrSkill\": {\n      \"category\": \"College\",\n      \"subCategory\": \"Bachelor of Engineering\"\n    },\n    \"workExperienceYears\": \"3-5 Years\",\n    \"nameOfLastRoleHeld\": \"Software Engineer\"\n  },\n  \"whatIWant\": {\n    \"natureOfJobsInterestedIn\": [\"Full-time\", \"Flexible\"],\n    \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\",\n    \"otherHelpNeeded\": [\"Training\"]\n  }\n\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "agent",
+                "profile",
+                "callback"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "764"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"2fc-dgB6OnS3HLkN+vuhossYMFT4Rf0\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Jan 2026 06:57:46 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 125,\n        \"metadata\": {\n            \"name\": \"Ashwin Raj ck\",\n            \"role\": \"Fitter\",\n            \"gender\": \"Male\",\n            \"whoIAm\": {\n                \"age\": 26,\n                \"name\": \"Ashwin Raj ck\",\n                \"phone\": \"919645640108\",\n                \"gender\": \"Male\",\n                \"location\": \"Bengaluru, Karnataka\"\n            },\n            \"whatIHave\": {\n                \"workExperience\": \"Worked before\",\n                \"nameOfLastRoleHeld\": \"Software Engineer\",\n                \"workExperienceYears\": \"3-5 Years\",\n                \"highestQualificationOrSkill\": {\n                    \"category\": \"College\",\n                    \"subCategory\": \"Bachelor of Engineering\"\n                },\n                \"workExperienceYearsConditional\": [\n                    \"3-5 Years\"\n                ]\n            },\n            \"whatIWant\": {\n                \"otherHelpNeeded\": [\n                    \"Training\"\n                ],\n                \"natureOfJobsInterestedIn\": [\n                    \"Full-time\",\n                    \"Flexible\"\n                ],\n                \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\"\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-01-23T06:57:46.322Z\",\n        \"updatedAt\": \"2026-01-23T06:57:46.322Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "job",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n    \"agentId\": 200,\n    \"basicInfo\": {\n        \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n        \"jobProviderLocation\": \"Hubballi\",\n        \"hiringManagerName\": \"Ashwin\",\n        \"hiringManagerPhoneNumber\": \"919645640108\",\n        \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n    },\n    \"jobDetails\": {\n        \"title\": \"Fitter\",\n        \"positions\": 10,\n        \"natureOfJob\": \"Apprenticeship\",\n        \"stipendMin\": 12000,\n        \"stipendMax\": 15000,\n        \"salaryMin\": 0,\n        \"salaryMax\": 0,\n        \"taskRateMin\": 0,\n        \"taskRateMax\": 0\n    },\n    \"jobNeeds\": {\n        \"candidateExperienceType\": \"Fresher\",\n        \"minEducationalInstitute\": \"ITI\",\n        \"minQualificationSchool\": \"\",\n        \"minQualificationCollege\": \"\",\n        \"minQualificationVocational\": [\n            \"Fitter (NSQF)\",\n            \"Electrician (NSQF)\"\n        ],\n        \"minQualificationCert\": \"\",\n        \"workExperienceYears\": \"\",\n        \"lastRoleHeld\": \"\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v2/agent/job/callback",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "agent",
+            "job",
+            "callback"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "job",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n      // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n  \"agentId\":200,\n  \"basicInfo\": {\n    \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n    \"jobProviderLocation\": \"Hubballi\",\n    \"hiringManagerName\": \"Ashwin\",\n    \"hiringManagerPhoneNumber\": \"919645640108\",\n    \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n  },\n  \"jobDetails\": {\n    \"title\": \"Fitter\",\n    \"positions\": 10,\n    \"natureOfJob\": \"Apprenticeship\",\n    \"stipendMin\": 12000,\n    \"stipendMax\": 15000,\n    \"salaryMin\": 0,\n    \"salaryMax\": 0,\n    \"taskRateMin\": 0,\n    \"taskRateMax\": 0\n  },\n  \"jobNeeds\": {\n    \"candidateExperienceType\": \"Fresher\",\n    \"minEducationalInstitute\": \"ITI\",\n    \"minQualificationSchool\": \"\",\n    \"minQualificationCollege\": \"\",\n    \"minQualificationVocational\": [\n      \"Fitter (NSQF)\",\n      \"Electrician (NSQF)\"\n    ],\n    \"minQualificationCert\": \"\",\n    \"workExperienceYears\": \"\",\n    \"lastRoleHeld\": \"\"\n  }\n\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v2/agent/job/callback",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "agent",
+                "job",
+                "callback"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.24.0 (Ubuntu)"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 23 Jan 2026 05:40:45 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1081"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"439-7E8CuJasF9+LzR5CgfZtrAlsOVQ\""
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 712,\n        \"metadata\": {\n            \"role\": \"Fitter\",\n            \"status\": \"open\",\n            \"agentId\": 200,\n            \"jobNeeds\": {\n                \"lastRoleHeld\": \"\",\n                \"workExperienceYears\": \"\",\n                \"minQualificationCert\": \"\",\n                \"minQualificationSchool\": \"\",\n                \"candidateExperienceType\": \"Fresher\",\n                \"minEducationalInstitute\": \"ITI\",\n                \"minQualificationCollege\": \"\",\n                \"minQualificationVocational\": [\n                    \"Fitter (NSQF)\",\n                    \"Electrician (NSQF)\"\n                ]\n            },\n            \"basicInfo\": {\n                \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n                \"hiringManagerName\": \"Ashwin\",\n                \"hiringManagerEmail\": \"ashwin@dhiway.com\",\n                \"jobProviderLocation\": {\n                    \"gps\": null,\n                    \"tag\": \"Hubballi\",\n                    \"city\": \"Hubballi\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"India\"\n                },\n                \"hiringManagerPhoneNumber\": \"919645640108\"\n            },\n            \"agentTitle\": \"Fitter\",\n            \"jobDetails\": {\n                \"title\": \"Fitter\",\n                \"positions\": 10,\n                \"salaryMax\": 0,\n                \"salaryMin\": 0,\n                \"stipendMax\": 15000,\n                \"stipendMin\": 12000,\n                \"natureOfJob\": \"Apprenticeship\",\n                \"taskRateMax\": 0,\n                \"taskRateMin\": 0\n            },\n            \"jobProviderLocation\": {\n                \"gps\": null,\n                \"tag\": \"Hubballi\",\n                \"city\": \"Hubballi\",\n                \"state\": \"\",\n                \"address\": \"\",\n                \"country\": \"India\"\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-01-23T05:40:45.414Z\",\n        \"updatedAt\": \"2026-01-23T05:40:45.414Z\"\n    }\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "API_KEY",
+      "value": ""
+    },
+    {
+      "key": "BASE_URL",
+      "value": ""
+    },
+    {
+      "key": "BASE_URL",
+      "value": "",
+      "disabled": true
+    }
+  ]
 }
