@@ -234,6 +234,188 @@
           "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 712,\n        \"metadata\": {\n            \"role\": \"Fitter\",\n            \"status\": \"open\",\n            \"agentId\": 200,\n            \"jobNeeds\": {\n                \"lastRoleHeld\": \"\",\n                \"workExperienceYears\": \"\",\n                \"minQualificationCert\": \"\",\n                \"minQualificationSchool\": \"\",\n                \"candidateExperienceType\": \"Fresher\",\n                \"minEducationalInstitute\": \"ITI\",\n                \"minQualificationCollege\": \"\",\n                \"minQualificationVocational\": [\n                    \"Fitter (NSQF)\",\n                    \"Electrician (NSQF)\"\n                ]\n            },\n            \"basicInfo\": {\n                \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n                \"hiringManagerName\": \"Ashwin\",\n                \"hiringManagerEmail\": \"ashwin@dhiway.com\",\n                \"jobProviderLocation\": {\n                    \"gps\": null,\n                    \"tag\": \"Hubballi\",\n                    \"city\": \"Hubballi\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"India\"\n                },\n                \"hiringManagerPhoneNumber\": \"919645640108\"\n            },\n            \"agentTitle\": \"Fitter\",\n            \"jobDetails\": {\n                \"title\": \"Fitter\",\n                \"positions\": 10,\n                \"salaryMax\": 0,\n                \"salaryMin\": 0,\n                \"stipendMax\": 15000,\n                \"stipendMin\": 12000,\n                \"natureOfJob\": \"Apprenticeship\",\n                \"taskRateMax\": 0,\n                \"taskRateMin\": 0\n            },\n            \"jobProviderLocation\": {\n                \"gps\": null,\n                \"tag\": \"Hubballi\",\n                \"city\": \"Hubballi\",\n                \"state\": \"\",\n                \"address\": \"\",\n                \"country\": \"India\"\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-01-23T05:40:45.414Z\",\n        \"updatedAt\": \"2026-01-23T05:40:45.414Z\"\n    }\n}"
         }
       ]
+    },
+    {
+      "name": "ingest",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sourceService\": \"SARVAM\",\n  \"agentId\": \"0\",\n  \"eventType\": \"JOB\",\n  \"payload\": {\n    \"title\": \"Assembler\",\n    \"location\": \"Bangalore\",\n    \"salary\": \"15000\",\n    \"experience\": \"2 years\"\n  }\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "job",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"0\",\n    \"sourceService\": \"SARVAM\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"title\": \"Assembler\",\n        \"location\": \"Bangalore\",\n        \"salary\": \"15000\",\n        \"experience\": \"2 years\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-9HAnfH4ZeVW1KRA1UXDHEWZkh6A\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Jan 2026 14:48:25 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"b93d497e-cdd6-4437-bd34-5a6e469953ab\"\n}"
+        },
+        {
+          "name": "profile",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"0\",\n    \"sourceService\": \"SARVAM\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"name\": \"jhon\",\n        \"location\": \"Bangalore\",\n        \"experience\": \"2 years\",\n        \"role\": \"Fitter\",\n        \"gender\": \"Male\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-nNPNlGoAKVXt3CloM6XwJla3QZk\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 26 Jan 2026 14:49:55 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"a1ff97d8-3160-45f6-bd01-6f4481a4c2d2\"\n}"
+        }
+      ]
     }
   ],
   "event": [
@@ -271,8 +453,7 @@
     },
     {
       "key": "BASE_URL",
-      "value": "",
-      "disabled": true
+      "value": ""
     }
   ]
 }
