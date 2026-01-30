@@ -280,81 +280,13 @@
       },
       "response": [
         {
-          "name": "job",
-          "originalRequest": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"0\",\n    \"sourceService\": \"SARVAM\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"title\": \"Assembler\",\n        \"location\": \"Bangalore\",\n        \"salary\": \"15000\",\n        \"experience\": \"2 years\"\n    }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-              "host": [
-                "{{BASE_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "agent",
-                "inbound",
-                "ingest"
-              ]
-            }
-          },
-          "status": "Accepted",
-          "code": 202,
-          "_postman_previewlanguage": null,
-          "header": [
-            {
-              "key": "X-Powered-By",
-              "value": "Express"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "Content-Length",
-              "value": "103"
-            },
-            {
-              "key": "ETag",
-              "value": "W/\"67-9HAnfH4ZeVW1KRA1UXDHEWZkh6A\""
-            },
-            {
-              "key": "Date",
-              "value": "Mon, 26 Jan 2026 14:48:25 GMT"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive"
-            },
-            {
-              "key": "Keep-Alive",
-              "value": "timeout=5"
-            }
-          ],
-          "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"b93d497e-cdd6-4437-bd34-5a6e469953ab\"\n}"
-        },
-        {
           "name": "profile",
           "originalRequest": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"0\",\n    \"sourceService\": \"SARVAM\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"name\": \"jhon\",\n        \"location\": \"Bangalore\",\n        \"experience\": \"2 years\",\n        \"role\": \"Fitter\",\n        \"gender\": \"Male\"\n    }\n}",
+              "raw": "{\n    \"sourceService\": \"SARVAM\",\n    \"agentId\": \"102\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"role\": \"Fitter\",\n        \"whoIAm\": {\n            \"name\": \"Ashwin Raj ck\",\n            \"gender\": \"Male\",\n            \"location\": \"Bengaluru, Karnataka\",\n            \"phone\": \"919645640108\",\n            \"age\": 26\n        },\n        \"whatIHave\": {\n            \"workExperience\": \"Worked before\",\n            \"workExperienceYearsConditional\": [\n                \"3-5 Years\"\n            ],\n            \"highestQualificationOrSkill\": {\n                \"category\": \"College\",\n                \"subCategory\": \"Bachelor of Engineering\"\n            },\n            \"workExperienceYears\": \"3-5 Years\",\n            \"nameOfLastRoleHeld\": \"Software Engineer\"\n        },\n        \"whatIWant\": {\n            \"natureOfJobsInterestedIn\": [\n                \"Full-time\",\n                \"Flexible\"\n            ],\n            \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\",\n            \"otherHelpNeeded\": [\n                \"Training\"\n            ]\n        }\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -397,11 +329,11 @@
             },
             {
               "key": "ETag",
-              "value": "W/\"67-nNPNlGoAKVXt3CloM6XwJla3QZk\""
+              "value": "W/\"67-3yv8Lxoc5/DaKI/q+0T6erIugSM\""
             },
             {
               "key": "Date",
-              "value": "Mon, 26 Jan 2026 14:49:55 GMT"
+              "value": "Thu, 29 Jan 2026 21:12:54 GMT"
             },
             {
               "key": "Connection",
@@ -413,7 +345,75 @@
             }
           ],
           "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"a1ff97d8-3160-45f6-bd01-6f4481a4c2d2\"\n}"
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"086ba700-491a-4a77-857f-96af693c7824\"\n}"
+        },
+        {
+          "name": "job",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n    \"sourceService\": \"SARVAM\",\n    \"agentId\": \"1\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"basicInfo\": {\n            \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n            \"jobProviderLocation\": \"madiwala\",\n            \"hiringManagerName\": \"Ashwin\",\n            \"hiringManagerPhoneNumber\": \"919645640108\",\n            \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n        },\n        \"jobDetails\": {\n            \"title\": \"Fitter\",\n            \"positions\": 10,\n            \"natureOfJob\": \"Apprenticeship\",\n            \"stipendMin\": 12000,\n            \"stipendMax\": 15000,\n            \"salaryMin\": 0,\n            \"salaryMax\": 0,\n            \"taskRateMin\": 0,\n            \"taskRateMax\": 0\n        },\n        \"jobNeeds\": {\n            \"candidateExperienceType\": \"Fresher\",\n            \"minEducationalInstitute\": \"ITI\",\n            \"minQualificationSchool\": \"\",\n            \"minQualificationCollege\": \"\",\n            \"minQualificationVocational\": [\n                \"Fitter (NSQF)\",\n                \"Electrician (NSQF)\"\n            ],\n            \"minQualificationCert\": \"\",\n            \"workExperienceYears\": \"\",\n            \"lastRoleHeld\": \"\"\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-JDNyF9FVcLy5nJjqCUQQbQID+tI\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 30 Jan 2026 08:24:50 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"be1399a1-0457-46e4-9769-9ed9d0d5d26c\"\n}"
         }
       ]
     }
@@ -454,6 +454,16 @@
     {
       "key": "BASE_URL",
       "value": ""
+    },
+    {
+      "key": "BASE_URL",
+      "value": "",
+      "disabled": true
+    },
+    {
+      "key": "API_KEY",
+      "value": "",
+      "disabled": true
     }
   ]
 }
