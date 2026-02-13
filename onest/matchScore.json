@@ -1,0 +1,246 @@
+{
+  "info": {
+    "_postman_id": "40e4bca3-dee3-472a-8b3c-e0b3aa52090a",
+    "name": "Match Score",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37951187",
+    "_collection_link": "https://go.postman.co/collection/37951187-40e4bca3-dee3-472a-8b3c-e0b3aa52090a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "health",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{api_key}}",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "url": {
+          "raw": "{{base_url}}/health",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "health",
+          "originalRequest": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{api_key}}",
+                "type": "text",
+                "disabled": true
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/health",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "63"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"3f-Ql0RgMGd4sJur9VhpR2o5ewnqVo\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 13 Feb 2026 11:57:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"ok\",\n    \"uptime\": 73.670076617,\n    \"timestamp\": 1770983838798\n}"
+        }
+      ]
+    },
+    {
+      "name": "match score",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{api_key}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"job\": {\n        \"id\": \"0646b145-9c14-40eb-b4dd-255ec22914c8\",\n        \"title\": \"Electrician\",\n        \"company\": \"test\",\n        \"location\": \"Bengaluru, Karnataka\",\n        \"salary\": \"Salary not specified\",\n        \"workingHours\": \"Not specified\",\n        \"monthlyInHand\": \"Not specified\",\n        \"monthlyPfEsic\": \"Not specified\",\n        \"monthlyOvertime\": \"Not specified\",\n        \"costPerSharingBed\": \"Not specified\",\n        \"stayProvided\": false,\n        \"trustScore\": 0,\n        \"matchScore\": 0,\n        \"verified\": true,\n        \"openings\": 1,\n        \"description\": \"Electrician\",\n        \"industry\": \"Electrical\",\n        \"experience\": \"Not specified\",\n        \"positions\": 1,\n        \"status\": \"open\",\n        \"providerId\": \"5996afe0-e845-4eb6-be6e-03612964e44e\",\n        \"jobProviderName\": \"test\",\n        \"jobProviderLocation\": {\n            \"address\": \"Hosakerehalli, 560085\",\n            \"city\": \"Bengaluru\",\n            \"country\": \"India\",\n            \"gps\": {\n                \"lat\": 12.9214578,\n                \"lng\": 77.5372316\n            },\n            \"state\": \"Karnataka\",\n            \"tag\": \"Bengaluru\"\n        },\n        \"jobDetails\": {\n            \"jobType\": [],\n            \"positions\": 1,\n            \"title\": \"Electrician\"\n        },\n        \"tags\": {\n            \"basicInfo\": {\n                \"jobProviderLocation\": {\n                    \"address\": \"Hosakerehalli, 560085\",\n                    \"city\": \"Bengaluru\",\n                    \"country\": \"India\",\n                    \"gps\": {\n                        \"lat\": 12.9214578,\n                        \"lng\": 77.5372316\n                    },\n                    \"state\": \"Karnataka\",\n                    \"tag\": \"Bengaluru\"\n                },\n                \"jobProviderName\": \"test\"\n            },\n            \"industry\": \"Electrical\",\n            \"jobDetails\": {\n                \"jobType\": [],\n                \"positions\": 1,\n                \"title\": \"Electrician\"\n            },\n            \"jobNeeds\": {},\n            \"jobProviderLocation\": {\n                \"address\": \"Hosakerehalli, 560085\",\n                \"city\": \"Bengaluru\",\n                \"country\": \"India\",\n                \"gps\": {\n                    \"lat\": 12.9214578,\n                    \"lng\": 77.5372316\n                },\n                \"state\": \"Karnataka\",\n                \"tag\": \"Bengaluru\"\n            },\n            \"role\": \"Electrician\",\n            \"status\": \"open\"\n        },\n        \"media\": []\n    },\n    \"seeker\": {\n        \"metadata\": {\n            \"name\": \"match score testing\",\n            \"age\": 26,\n            \"currentLocation\": \"\",\n            \"desiredLocation\": \"\",\n            \"whoiam\": {\n                \"name\": \"ashwin prof uat\",\n                \"phone\": \"+919645640108\",\n                \"gender\": \"\",\n                \"hometown\": \"\",\n                \"location\": \"\",\n                \"fatherName\": \"\",\n                \"motherName\": \"\",\n                \"dateOfBirth\": \"\",\n                \"aadharNumber\": \"\",\n                \"locationData\": {\n                    \"city\": \"\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"\"\n                },\n                \"isAgeVerified\": false,\n                \"isNameVerified\": false,\n                \"currentLocation\": \"\",\n                \"desiredLocation\": \"\",\n                \"isPhoneVerified\": false,\n                \"isLocationVerified\": false\n            },\n            \"whatihave\": {\n                \"age\": 26,\n                \"rollNumber\": \"\",\n                \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n                \"isAgeVerified\": false,\n                \"languageSpoken\": [],\n                \"previousCompany\": \"\",\n                \"skillProofVideo\": \"\",\n                \"machinesOperated\": [],\n                \"previousLocation\": null,\n                \"trainingDuration\": null,\n                \"itiSpecialization\": [\n                    \"Additive Manufacturing Technician Three D Painting\",\n                    \"Additive Manufacturing Technician Three D Printing (NSQF)\",\n                    \"ADVANCED CNC MACHINING TECHNICIAN (NSQF)\"\n                ],\n                \"qualityProofImage\": \"\",\n                \"currentMonthlySalary\": null,\n                \"highestQualification\": [],\n                \"fitterAssessmentScore\": null,\n                \"intentAssessmentScore\": null,\n                \"totalYearsOfExperience\": null\n            },\n            \"whatiwant\": {\n                \"monthlyPFESIC\": null,\n                \"workHoursPerDay\": null,\n                \"preferredModeOfWork\": [],\n                \"monthlyOTExpectation\": null,\n                \"monthlyInHandPreferred\": null\n            },\n            \"skills\": [],\n            \"experience\": [],\n            \"certificates\": [],\n            \"education\": [],\n            \"skillCertifications\": [],\n            \"workExperience\": [],\n            \"isGenderVerified\": false,\n            \"isAadharVerified\": false,\n            \"isHometownVerified\": false,\n            \"isNameVerified\": false,\n            \"isAgeVerified\": false,\n            \"assessmentScores\": [],\n            \"documentVerificationStatus\": []\n        }\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{base_url}}/match-score",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "match-score"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "match score",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{api_key}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"job\": {\n        \"id\": \"0646b145-9c14-40eb-b4dd-255ec22914c8\",\n        \"title\": \"Electrician\",\n        \"company\": \"test\",\n        \"location\": \"Bengaluru, Karnataka\",\n        \"salary\": \"Salary not specified\",\n        \"workingHours\": \"Not specified\",\n        \"monthlyInHand\": \"Not specified\",\n        \"monthlyPfEsic\": \"Not specified\",\n        \"monthlyOvertime\": \"Not specified\",\n        \"costPerSharingBed\": \"Not specified\",\n        \"stayProvided\": false,\n        \"verified\": true,\n        \"openings\": 1,\n        \"description\": \"Electrician\",\n        \"industry\": \"Electrical\",\n        \"experience\": \"Not specified\",\n        \"positions\": 1,\n        \"status\": \"open\",\n        \"providerId\": \"5996afe0-e845-4eb6-be6e-03612964e44e\",\n        \"jobProviderName\": \"test\",\n        \"jobProviderLocation\": {\n            \"address\": \"Hosakerehalli, 560085\",\n            \"city\": \"Bengaluru\",\n            \"country\": \"India\",\n            \"gps\": {\n                \"lat\": 12.9214578,\n                \"lng\": 77.5372316\n            },\n            \"state\": \"Karnataka\",\n            \"tag\": \"Bengaluru\"\n        },\n        \"jobDetails\": {\n            \"jobType\": [],\n            \"positions\": 1,\n            \"title\": \"Electrician\"\n        },\n        \"tags\": {\n            \"basicInfo\": {\n                \"jobProviderLocation\": {\n                    \"address\": \"Hosakerehalli, 560085\",\n                    \"city\": \"Bengaluru\",\n                    \"country\": \"India\",\n                    \"gps\": {\n                        \"lat\": 12.9214578,\n                        \"lng\": 77.5372316\n                    },\n                    \"state\": \"Karnataka\",\n                    \"tag\": \"Bengaluru\"\n                },\n                \"jobProviderName\": \"test\"\n            },\n            \"industry\": \"Electrical\",\n            \"jobDetails\": {\n                \"jobType\": [],\n                \"positions\": 1,\n                \"title\": \"Electrician\"\n            },\n            \"jobNeeds\": {},\n            \"jobProviderLocation\": {\n                \"address\": \"Hosakerehalli, 560085\",\n                \"city\": \"Bengaluru\",\n                \"country\": \"India\",\n                \"gps\": {\n                    \"lat\": 12.9214578,\n                    \"lng\": 77.5372316\n                },\n                \"state\": \"Karnataka\",\n                \"tag\": \"Bengaluru\"\n            },\n            \"role\": \"Electrician\",\n            \"status\": \"open\"\n        },\n        \"media\": []\n    },\n    \"seeker\": {\n        \"metadata\": {\n            \"name\": \"match score testing\",\n            \"age\": 26,\n            \"currentLocation\": \"\",\n            \"desiredLocation\": \"\",\n            \"whoiam\": {\n                \"name\": \"ashwin prof uat\",\n                \"phone\": \"+919645640108\",\n                \"gender\": \"\",\n                \"hometown\": \"\",\n                \"location\": \"\",\n                \"fatherName\": \"\",\n                \"motherName\": \"\",\n                \"dateOfBirth\": \"\",\n                \"aadharNumber\": \"\",\n                \"locationData\": {\n                    \"city\": \"\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"\"\n                },\n                \"isAgeVerified\": false,\n                \"isNameVerified\": false,\n                \"currentLocation\": \"\",\n                \"desiredLocation\": \"\",\n                \"isPhoneVerified\": false,\n                \"isLocationVerified\": false\n            },\n            \"whatihave\": {\n                \"age\": 26,\n                \"rollNumber\": \"\",\n                \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n                \"isAgeVerified\": false,\n                \"languageSpoken\": [],\n                \"previousCompany\": \"\",\n                \"skillProofVideo\": \"\",\n                \"machinesOperated\": [],\n                \"previousLocation\": null,\n                \"trainingDuration\": null,\n                \"itiSpecialization\": [\n                    \"Additive Manufacturing Technician Three D Painting\",\n                    \"Additive Manufacturing Technician Three D Printing (NSQF)\",\n                    \"ADVANCED CNC MACHINING TECHNICIAN (NSQF)\"\n                ],\n                \"qualityProofImage\": \"\",\n                \"currentMonthlySalary\": null,\n                \"highestQualification\": [],\n                \"fitterAssessmentScore\": null,\n                \"intentAssessmentScore\": null,\n                \"totalYearsOfExperience\": null\n            },\n            \"whatiwant\": {\n                \"monthlyPFESIC\": null,\n                \"workHoursPerDay\": null,\n                \"preferredModeOfWork\": [],\n                \"monthlyOTExpectation\": null,\n                \"monthlyInHandPreferred\": null\n            },\n            \"skills\": [],\n            \"experience\": [],\n            \"certificates\": [],\n            \"education\": [],\n            \"skillCertifications\": [],\n            \"workExperience\": [],\n            \"isGenderVerified\": false,\n            \"isAadharVerified\": false,\n            \"isHometownVerified\": false,\n            \"isNameVerified\": false,\n            \"isAgeVerified\": false,\n            \"assessmentScores\": [],\n            \"documentVerificationStatus\": []\n        }\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{base_url}}/match-score",
+              "host": [
+                "{{base_url}}"
+              ],
+              "path": [
+                "match-score"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.24.0 (Ubuntu)"
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 13 Feb 2026 12:01:18 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "27"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1b-au6fWsmXBa6XohdwMSrDvSVLqxI\""
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"score\": \"3\",\n    \"cached\": true\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": ""
+    },
+    {
+      "key": "api_key",
+      "value": ""
+    },
+    {
+      "key": "base_url",
+      "value": "",
+      "disabled": true
+    }
+  ]
+}
