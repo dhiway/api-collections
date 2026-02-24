@@ -280,13 +280,13 @@
       },
       "response": [
         {
-          "name": "profile",
+          "name": "Sarvam Job Sample",
           "originalRequest": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"sourceService\": \"SARVAM\",\n    \"agentId\": \"102\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"role\": \"Fitter\",\n        \"whoIAm\": {\n            \"name\": \"Ashwin Raj ck\",\n            \"gender\": \"Male\",\n            \"location\": \"Bengaluru, Karnataka\",\n            \"phone\": \"919645640108\",\n            \"age\": 26\n        },\n        \"whatIHave\": {\n            \"workExperience\": \"Worked before\",\n            \"workExperienceYearsConditional\": [\n                \"3-5 Years\"\n            ],\n            \"highestQualificationOrSkill\": {\n                \"category\": \"College\",\n                \"subCategory\": \"Bachelor of Engineering\"\n            },\n            \"workExperienceYears\": \"3-5 Years\",\n            \"nameOfLastRoleHeld\": \"Software Engineer\"\n        },\n        \"whatIWant\": {\n            \"natureOfJobsInterestedIn\": [\n                \"Full-time\",\n                \"Flexible\"\n            ],\n            \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\",\n            \"otherHelpNeeded\": [\n                \"Training\"\n            ]\n        }\n    }\n}",
+              "raw": "{\n\n    \"sourceService\": \"SARVAM\",\n    \"app_instance\": \"postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"contact\": {\n            \"phone\": \"na\"\n        },\n        \"Org_name\": \"Karnatak Chamber of Commerce and Industry, KCCI\",\n        \"morejobs\": \"na\",\n        \"Role_Name\": \"Fitter\",\n        \"minimaljd\": \"na\",\n        \"user_name\": \"Priya\",\n        \"right_time\": \"na\",\n        \"Correct_PoC\": \"na\",\n        \"Company_Name\": \"V-Tech\",\n        \"Correct_Area\": \"na\",\n        \"app_instance\": \"up-getjob\",\n        \"Callback_time\": \"na\",\n        \"Location_area\": \"Gokul Road\",\n        \"Monthly_Salary\": \"na\",\n        \"consent_status\": \"na\",\n        \"Org_Leader_Name\": \"Manjunath\",\n        \"WhatsApp_Number\": \"919645640108\",\n        \"Correct_District\": \"na\",\n        \"Correct_PoC_Name\": \"na\",\n        \"WhatsApp_Consent\": \"na\",\n        \"updated_username\": \"na\",\n        \"Location_district\": \"Dharwad\",\n        \"Correct_PoC_Number\": \"na\",\n        \"Number_of_Openings\": \"na\",\n        \"Looking_to_hire_now\": \"na\",\n        \"Org_leader_position\": \"Vice President\",\n        \"correct_details_captured\": \"na\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -329,11 +329,11 @@
             },
             {
               "key": "ETag",
-              "value": "W/\"67-3yv8Lxoc5/DaKI/q+0T6erIugSM\""
+              "value": "W/\"67-2V1RhoSpnqWctYsnVl2cmoiFEJ4\""
             },
             {
               "key": "Date",
-              "value": "Thu, 29 Jan 2026 21:12:54 GMT"
+              "value": "Sat, 31 Jan 2026 18:55:38 GMT"
             },
             {
               "key": "Connection",
@@ -345,16 +345,16 @@
             }
           ],
           "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"086ba700-491a-4a77-857f-96af693c7824\"\n}"
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"3b40b710-ba53-4d94-acc1-7c1df1754719\"\n}"
         },
         {
-          "name": "job",
+          "name": "Sarvam Profile Sample",
           "originalRequest": {
             "method": "POST",
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n    \"sourceService\": \"SARVAM\",\n    \"agentId\": \"1\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"basicInfo\": {\n            \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n            \"jobProviderLocation\": \"madiwala\",\n            \"hiringManagerName\": \"Ashwin\",\n            \"hiringManagerPhoneNumber\": \"919645640108\",\n            \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n        },\n        \"jobDetails\": {\n            \"title\": \"Fitter\",\n            \"positions\": 10,\n            \"natureOfJob\": \"Apprenticeship\",\n            \"stipendMin\": 12000,\n            \"stipendMax\": 15000,\n            \"salaryMin\": 0,\n            \"salaryMax\": 0,\n            \"taskRateMin\": 0,\n            \"taskRateMax\": 0\n        },\n        \"jobNeeds\": {\n            \"candidateExperienceType\": \"Fresher\",\n            \"minEducationalInstitute\": \"ITI\",\n            \"minQualificationSchool\": \"\",\n            \"minQualificationCollege\": \"\",\n            \"minQualificationVocational\": [\n                \"Fitter (NSQF)\",\n                \"Electrician (NSQF)\"\n            ],\n            \"minQualificationCert\": \"\",\n            \"workExperienceYears\": \"\",\n            \"lastRoleHeld\": \"\"\n        }\n    }\n}",
+              "raw": "{\n  \"sourceService\": \"SARVAM\",\n  \"app_instance\": \"getjob\",\n  \"eventType\": \"PROFILE\",\n  \"payload\": {\n    \"contact\": {\n      \"phone\": \"9645640108\"\n    },\n    \"skill\": \"Electrician\",\n    \"Job_Type\": \"Full Time\",\n    \"LastRole\": \"Senior Electrician\",\n    \"Org_name\": \"ABC Electrical Works\",\n    \"user_name\": \"Ramesh Kumar\",\n    \"Other_Needs\": \"Accommodation required\",\n    \"Location_area\": \"Whitefield\",\n    \"consent_status\": \"yes\",\n    \"WhatsApp_Number\": \"9645640108\",\n    \"Years_of_workex\": \"5\",\n    \"JobTypes_NearYou\": \"Construction, Maintenance\",\n    \"Location_district\": \"Bengaluru Urban\",\n    \"Job_Seeker_Persona\": \"Skilled Worker\",\n    \"NumberOfJobsNearYou\": \"12\",\n    \"Looking_for_work_now\": \"yes\",\n    \"Job_Aspiration_Role_name\": \"Electrician\",\n    \"Correct_District\": \"Bengaluru\",\n    \"Correct_Area\": \"Whitefield\",\n    \"correct_skill\": \"Electrician\",\n    \"Above18\": \"yes\",\n    \"Age\": \"28\"\n  }\n}\n",
               "options": {
                 "raw": {
                   "language": "json"
@@ -397,11 +397,11 @@
             },
             {
               "key": "ETag",
-              "value": "W/\"67-JDNyF9FVcLy5nJjqCUQQbQID+tI\""
+              "value": "W/\"67-94poxmwHxJvj8mmXxnjYzgjKojc\""
             },
             {
               "key": "Date",
-              "value": "Fri, 30 Jan 2026 08:24:50 GMT"
+              "value": "Sat, 31 Jan 2026 20:09:26 GMT"
             },
             {
               "key": "Connection",
@@ -413,7 +413,143 @@
             }
           ],
           "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"be1399a1-0457-46e4-9769-9ed9d0d5d26c\"\n}"
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"6c915757-aefc-4772-bdbb-3db178307f44\"\n}"
+        },
+        {
+          "name": "Dialflow Profile Sample",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"getjob\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"age\": \"23\",\n        \"name\": \"onest-user\",\n        \"phone\": \"919645640108\"\n\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.24.0 (Ubuntu)"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Feb 2026 10:05:46 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-TbCnlz3EHpfgdSuWakJ7LpVJ35E\""
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"e4596a65-35c1-4879-bbeb-acb275b7851d\"\n}"
+        },
+        {
+          "name": "Dialflow Job Sample",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"name\": \"onest-user\",\n        \"phoneNumber\": \"+919645640108\",\n        \"jobProviderName\": \"Test Provider\",\n        \"title\": \"Fitter\",\n        \"positions\": 1,\n        \"monthly_salary\": 0,\n        \"location\": \"Hubballi\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.24.0 (Ubuntu)"
+            },
+            {
+              "key": "Date",
+              "value": "Tue, 24 Feb 2026 10:09:34 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-b5fXLFvW96QMtb3uFqdhU1p0ACM\""
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"bc7505bc-ea09-446a-8253-ae8a8279151d\"\n}"
         }
       ]
     }
@@ -453,7 +589,8 @@
     },
     {
       "key": "BASE_URL",
-      "value": ""
+      "value": "",
+      "disabled": true
     },
     {
       "key": "BASE_URL",
@@ -464,6 +601,10 @@
       "key": "API_KEY",
       "value": "",
       "disabled": true
+    },
+    {
+      "key": "primary",
+      "value": ""
     }
   ]
 }
