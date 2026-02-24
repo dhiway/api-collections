@@ -422,7 +422,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"getjob\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"age\": \"23\",\n        \"name\": \"onest-user\",\n        \"phone\": \"919645640108\"\n\n    }\n}",
+              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"up-getjob\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"age\": \"23\",\n        \"name\": \"onest-user\",\n        \"phone\": \"919645640108\"\n\n\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -490,7 +490,7 @@
             "header": [],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"name\": \"onest-user\",\n        \"phoneNumber\": \"+919645640108\",\n        \"jobProviderName\": \"Test Provider\",\n        \"title\": \"Fitter\",\n        \"positions\": 1,\n        \"monthly_salary\": 0,\n        \"location\": \"Hubballi\"\n    }\n}",
+              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"up-postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"name\": \"onest-user\",\n        \"phoneNumber\": \"+919645640108\",\n        \"jobProviderName\": \"Test Provider\",\n        \"title\": \"Fitter\",\n        \"positions\": 1,\n        \"monthly_salary\": 0,\n        \"location\": \"Hubballi\"\n    }\n}",
               "options": {
                 "raw": {
                   "language": "json"
