@@ -1,0 +1,409 @@
+{
+  "info": {
+    "_postman_id": "9f9836b7-6e7f-446b-9f80-ceedc52de930",
+    "name": "Agent Ingest Api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37951187",
+    "_collection_link": "https://go.postman.co/collection/37951187-9f9836b7-6e7f-446b-9f80-ceedc52de930?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create Profile",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"PROFILE\",\n    \"app_instance\": \"up-getjob\",\n    \"payload\": {\n        \"phone\": \"9645640108\",\n        \"name\": \"Rahul Sharma Testing\",\n        \"gender\": \"Male\",\n        \"location\": \"Bangalore\",\n        \"age\": 28,\n        \"role\": \"Any\",\n        \"workExperience\": \"Worked before\",\n        \"workExperienceYears\": \"5\",\n        \"highestQualification\": \"B.Tech\",\n        \"natureOfJobsInterestedIn\": \"Full-time\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Profile",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"PROFILE\",\n    \"app_instance\": \"up-getjob\",\n    \"payload\": {\n        \"phone\": \"9645640108\",\n        \"name\": \"Rahul Sharma Testing\",\n        \"gender\": \"Male\",\n        \"location\": \"Bangalore\",\n        \"age\": 28,\n        \"role\": \"Any\",\n        \"workExperience\": \"Worked before\",\n        \"workExperienceYears\": \"5\",\n        \"highestQualification\": \"B.Tech\",\n        \"natureOfJobsInterestedIn\": \"Full-time\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-CxcuARmXLjpaRRg9Vdg+C8/eR+Y\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 10:16:55 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"caa3bda1-0fc1-45b2-ab7a-a6334d41424f\"\n}"
+        },
+        {
+          "name": "Create Profile (min data)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sourceService\": \"ONESTAGENT\",\n  \"eventType\": \"PROFILE\",\n  \"agentId\": \"up-getjob\",\n  \"payload\": {\n    \"phone\": \"9645640108\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-Od8ffIN1aMOx2/i040nCNDrSpnA\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 10:22:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"3cffe4df-fce4-4281-b767-18129c34054e\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Create Job",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"sourceService\": \"ONESTAGENT\",\n  \"eventType\": \"JOB\",\n  \"app_instance\": \"up-postjob\",\n  \"payload\": {\n    \"phoneNumber\": \"9645640108\",\n    \"title\": \"Fitter\",\n    \"companyName\": \"Acme Corp\",\n    \"orgName\": \"Acme Corp\",\n    \"jobProviderLocation\": \"Bangalore, Karnataka\",\n    \"hiringManagerName\": \"John Doe\",\n    \"hiringManagerEmail\": \"john@acme.com\",\n    \"natureOfJob\": \"Full-time\",\n    \"salaryMin\": 30000,\n    \"salaryMax\": 50000,\n    \"positions\": 2,\n    \"stipendMin\": 10000,\n    \"stipendMax\": 15000,\n    \"taskRateMin\": 500,\n    \"taskRateMax\": 1000,\n    \"candidateExperienceType\": \"Worked before\",\n    \"minEducationalInstitute\": \"College\",\n    \"minQualificationSchool\": \"10th\",\n    \"minQualificationCollege\": \"B.Tech/B.E.\",\n    \"minQualificationVocational\": [\"ITI\"],\n    \"workExperienceYears\": \"3-5 Years\",\n    \"lastRoleHeld\": \"Fitter\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create Job (min data)",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sourceService\": \"ONESTAGENT\",\n  \"eventType\": \"JOB\",\n  \"app_instance\": \"up-postjob\",\n  \"payload\": {\n    \"phoneNumber\": \"9645640108\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-f/esPFDZamIY1WKBrfSvMXP5YgM\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 10:25:49 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"bef60003-634b-4282-88f7-f001afd4a632\"\n}"
+        },
+        {
+          "name": "Create Job",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"sourceService\": \"ONESTAGENT\",\n  \"eventType\": \"JOB\",\n  \"app_instance\": \"up-postjob\",\n  \"payload\": {\n    \"phoneNumber\": \"9645640108\",\n    \"title\": \"Fitter\",\n    \"companyName\": \"Acme Corp\",\n    \"orgName\": \"Acme Corp\",\n    \"jobProviderLocation\": \"Bangalore, Karnataka\",\n    \"hiringManagerName\": \"John Doe\",\n    \"hiringManagerEmail\": \"john@acme.com\",\n    \"natureOfJob\": \"Full-time\",\n    \"salaryMin\": 30000,\n    \"salaryMax\": 50000,\n    \"positions\": 2,\n    \"stipendMin\": 10000,\n    \"stipendMax\": 15000,\n    \"taskRateMin\": 500,\n    \"taskRateMax\": 1000,\n    \"candidateExperienceType\": \"Worked before\",\n    \"minEducationalInstitute\": \"College\",\n    \"minQualificationSchool\": \"10th\",\n    \"minQualificationCollege\": \"B.Tech/B.E.\",\n    \"minQualificationVocational\": [\"ITI\"],\n    \"workExperienceYears\": \"3-5 Years\",\n    \"lastRoleHeld\": \"Fitter\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-negj0eqbhcf+HF7zv+ABVPGmGiE\""
+            },
+            {
+              "key": "Date",
+              "value": "Fri, 27 Mar 2026 10:35:43 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"80447fc8-d746-4e15-a3ef-5c8e8f6c29d3\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    },
+    {
+      "key": "API_KEY",
+      "value": ""
+    }
+  ]
+}
