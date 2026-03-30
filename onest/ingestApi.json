@@ -370,6 +370,117 @@
           "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"80447fc8-d746-4e15-a3ef-5c8e8f6c29d3\"\n}"
         }
       ]
+    },
+    {
+      "name": "Update Profile",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_PROFILE\",\n    // \"app_instance\": \"up-getjob\",\n    \"payload\": {\n        \"profileId\":\"4f08c681-4c89-4be9-9f5c-85a64ad122ba\",\n        \"phone\": \"9645640108\",\n        \"name\": \"Rahul Sharma updated\",\n        // \"gender\": \"Male\",\n        \"location\": \"Bangalore\",\n        // \"age\": 28,\n        \"role\": \"Any\"\n        // \"workExperience\": \"Worked before\",\n        // \"workExperienceYears\": \"5\",\n        // \"highestQualification\": \"B.Tech\",\n        // \"natureOfJobsInterestedIn\": \"Full-time\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Profile",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_PROFILE\",\n    \"app_instance\": \"up-getjob\",\n    \"payload\": {\n        \"profileId\":\"46885caf-08ac-4283-9c93-bfdd90398cae\",\n        \"phone\": \"9645640108\",\n        \"name\": \"Rahul Sharma\",\n        // \"gender\": \"Male\",\n        // \"location\": \"Bangalore\",\n        // \"age\": 28,\n        \"role\": \"Any\"\n        // \"workExperience\": \"Worked before\",\n        // \"workExperienceYears\": \"5\",\n        // \"highestQualification\": \"B.Tech\",\n        // \"natureOfJobsInterestedIn\": \"Full-time\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-2wGQ3vRxbDOVZiEVi9cbyUYMEB8\""
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 30 Mar 2026 12:10:13 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"3d33d70f-f925-4a26-abcf-c22bd0037257\"\n}"
+        }
+      ]
     }
   ],
   "event": [
@@ -399,10 +510,15 @@
   "variable": [
     {
       "key": "BASE_URL",
-      "value": ""
+      "value": "",
+      "disabled": true
     },
     {
       "key": "API_KEY",
+      "value": ""
+    },
+    {
+      "key": "BASE_URL",
       "value": ""
     }
   ]
