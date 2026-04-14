@@ -1,0 +1,60 @@
+{
+  "info": {
+    "_postman_id": "487b47b6-b723-41c6-a3ac-7aab5f9e86b0",
+    "name": "New Collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53997653",
+    "_collection_link": "https://go.postman.co/collection/53997653-487b47b6-b723-41c6-a3ac-7aab5f9e86b0?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "External",
+      "item": [
+        {
+          "name": "external-org-creation",
+          "request": {
+            "auth": {
+              "type": "apikey",
+              "apikey": [
+                {
+                  "key": "value",
+                  "value": "Jobs_we23ferffgg747b-40fc-b825-e3047533176e",
+                  "type": "string"
+                },
+                {
+                  "key": "key",
+                  "value": "x-api-key",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"ownerName\": \"Auser\",\n    \"ownerEmail\": \"amit.sarang+1@dhiway.com\",\n    \"organizationName\":\"dhi\",\n    \"orgSlug\": \"dhiway\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL_PROD}}/api/v1/external/organizations",
+              "host": [
+                "{{BASE_URL_PROD}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "external",
+                "organizations"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
