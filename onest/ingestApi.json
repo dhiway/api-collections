@@ -481,6 +481,567 @@
           "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"3d33d70f-f925-4a26-abcf-c22bd0037257\"\n}"
         }
       ]
+    },
+    {
+      "name": "Update Job",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    \"app_instance\": \"up-postjob\",\n    \"payload\": {\n        \"jobId\": \"e16b99ce-1c49-4dcf-a74c-1149739326f3\",\n        \"phoneNumber\": \"9645640108\"\n        // \"title\": \"Any\",\n        // \"jobProviderLocation\": \"Kannur, kerala\",\n        // \"hiringManagerName\": \"John Doe updated\",\n        // \"hiringManagerEmail\": \"johnupdated@acme.com\",\n        // \"salaryMin\": 30000,\n        ,\n        \"salaryMax\": 90000,\n        \"positions\": 220\n        //    , \"stipendMin\": 10000,\n        // \"stipendMax\": 15000,\n        // \"taskRateMin\": 500,\n        // \"taskRateMax\": 1000,\n        // \"candidateExperienceType\": \"Worked before\",\n        // \"minEducationalInstitute\": \"College\",\n        // \"minQualificationSchool\": \"10th\",\n        // \"minQualificationCollege\": \"B.Tech/B.E.\",\n        // \"minQualificationVocational\": [\"ITI\"],\n        // \"workExperienceYears\": \"3-5 Years\",\n        // \"lastRoleHeld\": \"Fitter\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Update Job",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    \"payload\": {\n        \"jobId\": \"0a403f71-4019-4292-ac53-8c00a19766ad\",\n        \"phoneNumber\": \"9645640108\"\n        // \"title\": \"Any\",\n        // \"jobProviderLocation\": \"Kannur, kerala\",\n        // \"hiringManagerName\": \"John Doe updated\",\n        // \"hiringManagerEmail\": \"johnupdated@acme.com\",\n        // \"salaryMin\": 30000,\n        // \"salaryMax\": 90000,\n        // \"positions\":220\n        //    , \"stipendMin\": 10000,\n        // \"stipendMax\": 15000,\n        // \"taskRateMin\": 500,\n        // \"taskRateMax\": 1000,\n        // \"candidateExperienceType\": \"Worked before\",\n        // \"minEducationalInstitute\": \"College\",\n        // \"minQualificationSchool\": \"10th\",\n        // \"minQualificationCollege\": \"B.Tech/B.E.\",\n        // \"minQualificationVocational\": [\"ITI\"],\n        // \"workExperienceYears\": \"3-5 Years\",\n        // \"lastRoleHeld\": \"Fitter\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-n1oj4NIhfo1LDGb6sr1GL/AvRYE\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 17:31:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"f8c0b065-5c5a-49ce-816d-5e49b0fa3f7a\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update Job Status",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    // \"app_instance\": \"up-postjob\",\n    \"payload\": {\n        \"jobId\": \"0a403f71-4019-4292-ac53-8c00a19766ad\",\n        \"phoneNumber\": \"9645640108\",\n        \"status\": \"draft\"\n    }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "inbound",
+            "ingest"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Open",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    \"payload\": {\n        \"jobId\": \"0a403f71-4019-4292-ac53-8c00a19766ad\",\n        \"phoneNumber\": \"9645640108\",\n        \"status\": \"open\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-ie9kQdOo8zzrqmDfEb5gTyPfE10\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 17:34:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"eea8d5da-1ea2-4ef3-8c3f-21bbd67010eb\"\n}"
+        },
+        {
+          "name": "Draft",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    \"payload\": {\n        \"jobId\": \"0a403f71-4019-4292-ac53-8c00a19766ad\",\n        \"phoneNumber\": \"9645640108\",\n        \"status\": \"draft\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-1CTYwZruTqYvG4yvgyThY2uZavg\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 17:35:04 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"6b7062f1-97cd-4735-9336-f7a2cd54a76a\"\n}"
+        },
+        {
+          "name": "archived or close",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"sourceService\": \"ONESTAGENT\",\n    \"eventType\": \"UPDATE_JOB\",\n    \"payload\": {\n        \"jobId\": \"0a403f71-4019-4292-ac53-8c00a19766ad\",\n        \"phoneNumber\": \"9645640108\",\n        \"status\": \"archived\"\n    }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "inbound",
+                "ingest"
+              ]
+            }
+          },
+          "status": "Accepted",
+          "code": 202,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "103"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"67-zTsSjlmBLjyomdfIa5k23lGiIX4\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 17:35:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"47039ab5-5da6-4001-bdd7-e6e91960df2b\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Job Details",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "{{API_KEY}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"phoneNumber\": \"919645640108\",\n     \"app_instance\": \"up-postjob\",\n    // \"jobId\":\"2d5cba28-59cd-4e6e-9545-94545a6e4bfa\"\n      \"status\": \"draft\"\n    //    eg: 'draft', 'open', 'closed', 'archived'\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v1/agent/job/details",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "agent",
+            "job",
+            "details"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Job Details",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phoneNumber\": \"919645640108\",\n    //  \"app_instance\": \"up-postjob\"\n    \"status\": \"open\"\n    //    eg: 'draft', 'open', 'closed', 'archived'\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/job/details",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "job",
+                "details"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1763"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6e3-bmUUJfzWZwxCUbmK8gau82gqin0\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 18:24:18 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"statusCode\": 200,\n        \"message\": \"Job Listings\",\n        \"data\": {\n            \"jobs\": [\n                {\n                    \"id\": \"2d5cba28-59cd-4e6e-9545-94545a6e4bfa\",\n                    \"title\": \"Fitter\",\n                    \"description\": \"\",\n                    \"status\": \"open\",\n                    \"location\": {\n                        \"gps\": {\n                            \"lat\": 15.3647083,\n                            \"lng\": 75.1239547\n                        },\n                        \"tag\": \"Hubballi\",\n                        \"city\": \"Hubballi\",\n                        \"state\": \"Karnataka\",\n                        \"address\": \"Hubballi, Karnataka, India\",\n                        \"country\": \"India\"\n                    },\n                    \"contact\": {},\n                    \"metadata\": {\n                        \"role\": \"Fitter\",\n                        \"source\": \"ONEST-AGENT\",\n                        \"status\": \"open\",\n                        \"agentId\": 200,\n                        \"industry\": \"ITI/Polytechnic\",\n                        \"jobNeeds\": {\n                            \"lastRoleHeld\": \"\",\n                            \"workExperienceYears\": \"\",\n                            \"minQualificationCert\": \"\",\n                            \"minQualificationSchool\": \"\",\n                            \"candidateExperienceType\": \"Fresher\",\n                            \"minEducationalInstitute\": \"ITI\",\n                            \"minQualificationCollege\": \"\",\n                            \"minQualificationVocational\": [\n                                \"Fitter (NSQF)\",\n                                \"Electrician (NSQF)\"\n                            ]\n                        },\n                        \"basicInfo\": {\n                            \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n                            \"hiringManagerName\": \"Ashwin\",\n                            \"hiringManagerEmail\": \"ashwin@dhiway.com\",\n                            \"jobProviderLocation\": {\n                                \"gps\": {\n                                    \"lat\": 15.3647083,\n                                    \"lng\": 75.1239547\n                                },\n                                \"tag\": \"Hubballi\",\n                                \"city\": \"Hubballi\",\n                                \"state\": \"Karnataka\",\n                                \"address\": \"Hubballi, Karnataka, India\",\n                                \"country\": \"India\"\n                            },\n                            \"hiringManagerPhoneNumber\": \"919645640108\"\n                        },\n                        \"agentTitle\": \"Fitter\",\n                        \"jobDetails\": {\n                            \"title\": \"Fitter\",\n                            \"positions\": 10,\n                            \"salaryMax\": 0,\n                            \"salaryMin\": 0,\n                            \"stipendMax\": 15000,\n                            \"stipendMin\": 12000,\n                            \"natureOfJob\": \"Apprenticeship\",\n                            \"taskRateMax\": 0,\n                            \"taskRateMin\": 0,\n                            \"maxMonthlyInHand\": 20000\n                        },\n                        \"jobProviderLocation\": {\n                            \"gps\": {\n                                \"lat\": 15.3647083,\n                                \"lng\": 75.1239547\n                            },\n                            \"tag\": \"Hubballi\",\n                            \"city\": \"Hubballi\",\n                            \"state\": \"Karnataka\",\n                            \"address\": \"Hubballi, Karnataka, India\",\n                            \"country\": \"India\"\n                        }\n                    },\n                    \"organizationName\": \"Karnataka Chamber of Commerce and Industry, KCCI\",\n                    \"organizationId\": \"ae6b1209-ff6a-453c-b70f-4ab305179457\",\n                    \"createdBy\": \"77641868-d88a-47f3-b42d-12c61693b44f\",\n                    \"createdAt\": \"2026-02-27T15:07:06.981Z\",\n                    \"updatedAt\": \"2026-04-16T09:56:26.827Z\"\n                }\n            ],\n            \"count\": 1\n        }\n    }\n}"
+        },
+        {
+          "name": "Get Job Details with job id",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{API_KEY}}",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phoneNumber\": \"919645640108\",\n    //  \"app_instance\": \"up-postjob\"\n    \"jobId\": \"2d5cba28-59cd-4e6e-9545-94545a6e4bfa\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v1/agent/job/details",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v1",
+                "agent",
+                "job",
+                "details"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1762"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"6e2-ji8b3j+C1aoAgZfNNZXWj1628No\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 16 Apr 2026 18:24:47 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"statusCode\": 200,\n        \"message\": \"Job Details\",\n        \"data\": {\n            \"jobs\": [\n                {\n                    \"id\": \"2d5cba28-59cd-4e6e-9545-94545a6e4bfa\",\n                    \"title\": \"Fitter\",\n                    \"description\": \"\",\n                    \"status\": \"open\",\n                    \"location\": {\n                        \"gps\": {\n                            \"lat\": 15.3647083,\n                            \"lng\": 75.1239547\n                        },\n                        \"tag\": \"Hubballi\",\n                        \"city\": \"Hubballi\",\n                        \"state\": \"Karnataka\",\n                        \"address\": \"Hubballi, Karnataka, India\",\n                        \"country\": \"India\"\n                    },\n                    \"contact\": {},\n                    \"metadata\": {\n                        \"role\": \"Fitter\",\n                        \"source\": \"ONEST-AGENT\",\n                        \"status\": \"open\",\n                        \"agentId\": 200,\n                        \"industry\": \"ITI/Polytechnic\",\n                        \"jobNeeds\": {\n                            \"lastRoleHeld\": \"\",\n                            \"workExperienceYears\": \"\",\n                            \"minQualificationCert\": \"\",\n                            \"minQualificationSchool\": \"\",\n                            \"candidateExperienceType\": \"Fresher\",\n                            \"minEducationalInstitute\": \"ITI\",\n                            \"minQualificationCollege\": \"\",\n                            \"minQualificationVocational\": [\n                                \"Fitter (NSQF)\",\n                                \"Electrician (NSQF)\"\n                            ]\n                        },\n                        \"basicInfo\": {\n                            \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n                            \"hiringManagerName\": \"Ashwin\",\n                            \"hiringManagerEmail\": \"ashwin@dhiway.com\",\n                            \"jobProviderLocation\": {\n                                \"gps\": {\n                                    \"lat\": 15.3647083,\n                                    \"lng\": 75.1239547\n                                },\n                                \"tag\": \"Hubballi\",\n                                \"city\": \"Hubballi\",\n                                \"state\": \"Karnataka\",\n                                \"address\": \"Hubballi, Karnataka, India\",\n                                \"country\": \"India\"\n                            },\n                            \"hiringManagerPhoneNumber\": \"919645640108\"\n                        },\n                        \"agentTitle\": \"Fitter\",\n                        \"jobDetails\": {\n                            \"title\": \"Fitter\",\n                            \"positions\": 10,\n                            \"salaryMax\": 0,\n                            \"salaryMin\": 0,\n                            \"stipendMax\": 15000,\n                            \"stipendMin\": 12000,\n                            \"natureOfJob\": \"Apprenticeship\",\n                            \"taskRateMax\": 0,\n                            \"taskRateMin\": 0,\n                            \"maxMonthlyInHand\": 20000\n                        },\n                        \"jobProviderLocation\": {\n                            \"gps\": {\n                                \"lat\": 15.3647083,\n                                \"lng\": 75.1239547\n                            },\n                            \"tag\": \"Hubballi\",\n                            \"city\": \"Hubballi\",\n                            \"state\": \"Karnataka\",\n                            \"address\": \"Hubballi, Karnataka, India\",\n                            \"country\": \"India\"\n                        }\n                    },\n                    \"organizationName\": \"Karnataka Chamber of Commerce and Industry, KCCI\",\n                    \"organizationId\": \"ae6b1209-ff6a-453c-b70f-4ab305179457\",\n                    \"createdBy\": \"77641868-d88a-47f3-b42d-12c61693b44f\",\n                    \"createdAt\": \"2026-02-27T15:07:06.981Z\",\n                    \"updatedAt\": \"2026-04-16T09:56:26.827Z\"\n                }\n            ],\n            \"count\": 1\n        }\n    }\n}"
+        }
+      ]
     }
   ],
   "event": [
@@ -510,8 +1071,7 @@
   "variable": [
     {
       "key": "BASE_URL",
-      "value": "",
-      "disabled": true
+      "value": ""
     },
     {
       "key": "API_KEY",
@@ -519,7 +1079,8 @@
     },
     {
       "key": "BASE_URL",
-      "value": ""
+      "value": "",
+      "disabled": true
     }
   ]
 }
