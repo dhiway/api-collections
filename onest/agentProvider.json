@@ -1,0 +1,339 @@
+{
+  "info": {
+    "_postman_id": "2c4d2dbc-abb3-480a-9df6-048a9f329412",
+    "name": "AI Job Provider Agent API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "37951187",
+    "_collection_link": "https://go.postman.co/collection/37951187-2c4d2dbc-abb3-480a-9df6-048a9f329412?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Talent Insight",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY_BPP}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    // \"role\":\"Fitter\"\n    // \"location\": \"ghaziabad\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL_UP}}/v1/talent/insights",
+          "host": [
+            "{{BASE_URL_UP}}"
+          ],
+          "path": [
+            "v1",
+            "talent",
+            "insights"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Talent Insight",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"role\":\"Fitter\",\n    \"location\": \"kerala\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/v1/talent/insights",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "v1",
+                "talent",
+                "insights"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "vary",
+              "value": "origin, access-control-request-method, access-control-request-headers"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-length",
+              "value": "725"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 20 Apr 2026 11:07:21 GMT"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"insights\": {\n        \"experience\": {\n            \"experienced\": 1,\n            \"fresher\": 0\n        },\n        \"gender_distribution\": {\n            \"female\": 0,\n            \"male\": 0,\n            \"other\": 1\n        },\n        \"job_type_preference\": {\n            \"apprenticeship\": 0,\n            \"flexible\": 0,\n            \"full_time\": 0,\n            \"internship\": 0\n        },\n        \"location_distribution\": [\n            {\n                \"city\": \"Dharwad\",\n                \"count\": 273\n            },\n            {\n                \"city\": \"Hubli\",\n                \"count\": 51\n            },\n            {\n                \"city\": \"Unknown\",\n                \"count\": 33\n            },\n            {\n                \"city\": \"Lucknow\",\n                \"count\": 19\n            },\n            {\n                \"city\": \"Bengaluru\",\n                \"count\": 10\n            },\n            {\n                \"city\": \"Holenarasipura\",\n                \"count\": 8\n            },\n            {\n                \"city\": \"Hassan\",\n                \"count\": 8\n            },\n            {\n                \"city\": \"Belgaum\",\n                \"count\": 7\n            },\n            {\n                \"city\": \"HASSAN\",\n                \"count\": 6\n            },\n            {\n                \"city\": \"Mudhol\",\n                \"count\": 6\n            }\n        ],\n        \"qualification\": {\n            \"certification\": 0,\n            \"college\": 0,\n            \"iti\": 0,\n            \"other\": 1,\n            \"school\": 0\n        }\n    },\n    \"location\": \"kerala\",\n    \"matched_candidates\": 1,\n    \"role\": \"Fitter\",\n    \"salary_range\": null,\n    \"supply_density\": \"Low\",\n    \"total_candidates\": 4099\n}"
+        }
+      ]
+    },
+    {
+      "name": "Talent Details",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY_BPP}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{BASE_URL_UP}}/v1/talent/details/50307919-a843-437e-a383-b21d0e38c75f",
+          "host": [
+            "{{BASE_URL_UP}}"
+          ],
+          "path": [
+            "v1",
+            "talent",
+            "details",
+            "50307919-a843-437e-a383-b21d0e38c75f"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Talent Details",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{BASE_URL_UP}}/v1/talent/details/50307919-a843-437e-a383-b21d0e38c75f",
+              "host": [
+                "{{BASE_URL_UP}}"
+              ],
+              "path": [
+                "v1",
+                "talent",
+                "details",
+                "50307919-a843-437e-a383-b21d0e38c75f"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Server",
+              "value": "nginx/1.24.0 (Ubuntu)"
+            },
+            {
+              "key": "Date",
+              "value": "Mon, 20 Apr 2026 18:30:11 GMT"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Content-Length",
+              "value": "606"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "vary",
+              "value": "origin, access-control-request-method, access-control-request-headers"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"profile\": {\n        \"agentId\": \"up-getjob\",\n        \"location\": null,\n        \"org_slug\": \"listenatscale\",\n        \"role\": \"Fitter\",\n        \"whatIHave\": {\n            \"highestQualificationOrSkill\": {\n                \"category\": \"Skill\",\n                \"subCategory\": \"Goods Packaging Machine Operator\"\n            },\n            \"nameOfLastRoleHeld\": \"Sahib JLC\",\n            \"workExperience\": \"Fresher\",\n            \"workExperienceYears\": \"2\",\n            \"workExperienceYearsConditional\": [\n                \"2\"\n            ]\n        },\n        \"whatIWant\": {\n            \"nameOfJobRolesInterestedIn\": \"Fitter\",\n            \"natureOfJobsInterestedIn\": [\n                \"full-time job\"\n            ],\n            \"otherHelpNeeded\": [\n                \"That all gets adjusted\"\n            ]\n        },\n        \"whoIAm\": {\n            \"age\": 18,\n            \"location\": \"Vaishali\",\n            \"name\": \"Avnesh\",\n            \"phone\": \"6397496031\"\n        }\n    },\n    \"profile_id\": \"50307919-a843-437e-a383-b21d0e38c75f\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Search Talent",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY_BPP}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    // \"query\": \"find me fitter in telangana\",\n    \"trade\": \"fitter\",\n    // \"location\": \"kerala\",\n    // \"experience\": \"Fresher\",\n    \"page\": 1,\n    \"limit\": 10\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL_UP}}/v1/talent/search",
+          "host": [
+            "{{BASE_URL_UP}}"
+          ],
+          "path": [
+            "v1",
+            "talent",
+            "search"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Search Talent",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    // \"query\": \"find me fitter in telangana\",\n    \"trade\": \"fitter\",\n    \"location\": \"kerala\",\n    \"experience\": \"Fresher\",\n    \"page\": 1,\n    \"limit\": 10\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/v1/talent/search",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "v1",
+                "talent",
+                "search"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "content-type",
+              "value": "application/json"
+            },
+            {
+              "key": "vary",
+              "value": "origin, access-control-request-method, access-control-request-headers"
+            },
+            {
+              "key": "access-control-allow-origin",
+              "value": "*"
+            },
+            {
+              "key": "content-length",
+              "value": "3012"
+            },
+            {
+              "key": "date",
+              "value": "Mon, 20 Apr 2026 11:05:47 GMT"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"candidate_count\": 4099,\n    \"limit\": 10,\n    \"matched_count\": 800,\n    \"page\": 1,\n    \"results\": [\n        {\n            \"job_roles_interested_in\": \"Fitter\",\n            \"jobs_interested_in\": [\n                \"Internship\"\n            ],\n            \"last_role_held\": \"Fitter\",\n            \"location\": \"Hyderabad, Telangana, India\",\n            \"name\": \"Ramesh Kumar\",\n            \"profile_id\": \"99e37fb9-c5ed-4f38-b014-3d4b3c94497a\",\n            \"qualification\": \"School\",\n            \"role\": \"Any\",\n            \"work_experience\": \"Fresher\",\n            \"work_experience_years\": \"< 1 Year\"\n        },\n        {\n            \"job_roles_interested_in\": \"fitter\",\n            \"jobs_interested_in\": [\n                \"Full-time\"\n            ],\n            \"last_role_held\": \"fresher\",\n            \"location\": \"Hubballi, Karnataka, India\",\n            \"name\": \"Ramesh Kumar\",\n            \"profile_id\": \"882fe6fe-1e4d-4414-81d2-af62fcbb2147\",\n            \"qualification\": \"College\",\n            \"role\": \"Any\",\n            \"work_experience\": \"Fresher\",\n            \"work_experience_years\": \"1 Year\"\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Hyderabad, Telangana, India\",\n            \"name\": \"sree-apply now test-1\",\n            \"profile_id\": \"953cc298-3e13-473d-a952-d85d29209d14\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": null,\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Alappuzha, Kerala, India\",\n            \"name\": \"any-fitter role\",\n            \"profile_id\": \"39c8cde6-3220-4184-821c-4c91f8b9e484\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": \"Less than 1 year\",\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Secunderabad, Telangana, India\",\n            \"name\": \"sree- fitt\",\n            \"profile_id\": \"2687624c-1ddd-4ad1-8912-6b635a27d616\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": null,\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Secunderabad, Telangana, India\",\n            \"name\": \"sreep-fitter\",\n            \"profile_id\": \"9515d66e-57ed-452f-9bfb-1e8fcbd1c6e4\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": \"None\",\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Hyderabad, Telangana, India\",\n            \"name\": \"Ramesh Kumar\",\n            \"profile_id\": \"f4ec81c3-c75e-4bd7-b482-e4ec74804c12\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": null,\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Bengaluru, Karnataka\",\n            \"name\": \"Ramesh Kumar\",\n            \"profile_id\": \"e8b5bb9e-8cac-4320-b1b5-79eaefc93e0f\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": null,\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Bengaluru, Karnataka\",\n            \"name\": \"Ramesh Kumar\",\n            \"profile_id\": \"c82cb5b4-7ad4-40d8-b89c-6cb6b4268c2b\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": null,\n            \"work_experience_years\": null\n        },\n        {\n            \"job_roles_interested_in\": null,\n            \"jobs_interested_in\": null,\n            \"last_role_held\": null,\n            \"location\": \"Electronic city, Bangalore\",\n            \"name\": \"Amit Sarang\",\n            \"profile_id\": \"0122fe81-5e8e-4082-b0f0-a4eb224aa0d5\",\n            \"qualification\": null,\n            \"role\": \"Fitter\",\n            \"work_experience\": \"More than 2 years\",\n            \"work_experience_years\": null\n        }\n    ]\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    },
+    {
+      "key": "API_KEY_BPP",
+      "value": ""
+    },
+    {
+      "key": "BASE_URL_DEMO",
+      "value": ""
+    },
+    {
+      "key": "BASE_URL_UP",
+      "value": ""
+    }
+  ]
+}
