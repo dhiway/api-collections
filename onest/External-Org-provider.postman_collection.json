@@ -1,0 +1,185 @@
+{
+  "info": {
+    "_postman_id": "aa88279f-e699-4985-87aa-3be30e1fc258",
+    "name": "External-Org",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "42111135"
+  },
+  "item": [
+    {
+      "name": "External-org-creation",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "jobs_qFNGLQMYrdWAqBbAGGjFrFZZuqHswSUDopigbgMdnguOXOdEuOosBSCqfnjHRvbY",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"ABC Enterprises\",\n  \"slug\": \"abc-enterprises\",\n  \"type\": \"employer\",\n  \"associationSlug\": \"exampletest\",\n  \"metadata\": {\n    \"contactPersonName\": \"Ravi Kumar\",\n    \"contactEmail\": \"ravi@abcenterprises.com\",\n    \"contactPhone\": \"+918888888888\",\n    \"gstNumber\": \"29ABCDE1234F1Z5\",\n    \"address\": \"Bengaluru, Karnataka\"\n  },\n  \"owner\": {\n    \"name\": \"AMIT\",\n    \"email\": \"amit.sarang@dhiway.com\"\n    // \"phoneNumber\": \"+918888888888\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/external/organization",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "external",
+            "organization"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "External-org-creation",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"example\",\n  \"slug\": \"exampletest\",\n  \"type\": \"association\",\n  \"metadata\": {\n    // \"contactPersonName\": \"Amit\",\n    // \"contactEmail\": \"admin@listenatscale.com\",\n    // \"contactPhone\": \"+919999999999\",\n    // \"website\": \"https://listenatscale.com\"\n  },\n  \"owner\": {\n    \"name\": \"Amit\",\n    \"email\": \"amit.sarang+test@dhiway.com\"\n    // \"phoneNumber\": \"+919999999999\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/external/organization",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "external",
+                "organization"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        },
+        {
+          "name": "External-org-creation",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"ABC Enterprises\",\n  \"slug\": \"abc-enterprises\",\n  \"type\": \"employer\",\n  \"associationSlug\": \"exampletest\",\n  \"metadata\": {\n    \"contactPersonName\": \"Ravi Kumar\",\n    \"contactEmail\": \"ravi@abcenterprises.com\",\n    \"contactPhone\": \"+918888888888\",\n    \"gstNumber\": \"29ABCDE1234F1Z5\",\n    \"address\": \"Bengaluru, Karnataka\"\n  },\n  \"owner\": {\n    \"name\": \"AMIT\",\n    \"email\": \"amit.sarang@dhiway.com\"\n    // \"phoneNumber\": \"+918888888888\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/external/organization",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "external",
+                "organization"
+              ]
+            }
+          },
+          "_postman_previewlanguage": null,
+          "header": null,
+          "cookie": [],
+          "body": null
+        }
+      ]
+    },
+    {
+      "name": "External-org-creation",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "jobs_rSWXUdxUIkDxRvKfXPHORajRYQAhPuFCRCecCeQAPLyuzBVfYINtrGpjMnJFxQjh",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"example\",\n  \"slug\": \"exampletest\",\n  \"type\": \"association\",\n  \"metadata\": {\n    // \"contactPersonName\": \"Amit\",\n    // \"contactEmail\": \"admin@listenatscale.com\",\n    // \"contactPhone\": \"+919999999999\",\n    // \"website\": \"https://listenatscale.com\"\n  },\n  \"owner\": {\n    \"name\": \"Amit\",\n    \"email\": \"amit.sarang+test@dhiway.com\"\n    // \"phoneNumber\": \"+919999999999\"\n  }\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/external/organization",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "external",
+            "organization"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "BASE_URL",
+      "value": ""
+    }
+  ]
+}
