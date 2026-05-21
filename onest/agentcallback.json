@@ -8,7 +8,7 @@
   },
   "item": [
     {
-      "name": "profile",
+      "name": "profile v1",
       "request": {
         "auth": {
           "type": "apikey",
@@ -29,7 +29,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    // getjob -> agentid -> \"0\"\n    // up-getjob -> agentid -> \"100\"\n    // mca-getjob -> agentid -> \"101\"\n    \"agentId\": \"100\",\n    \"role\": \"Fitter\",\n    \"whoIAm\": {\n        \"name\": \"Ashwin Raj ck\",\n        \"gender\": \"Male\",\n        \"location\": \"Bengaluru, Karnataka\",\n        \"phone\": \"919645640108\",\n        \"age\": 26\n    },\n    \"whatIHave\": {\n        \"workExperience\": \"Worked before\",\n        \"workExperienceYearsConditional\": [\n            \"3-5 Years\"\n        ],\n        \"highestQualificationOrSkill\": {\n            \"category\": \"College\",\n            \"subCategory\": \"Bachelor of Engineering\"\n        },\n        \"workExperienceYears\": \"3-5 Years\",\n        \"nameOfLastRoleHeld\": \"Software Engineer\"\n    },\n    \"whatIWant\": {\n        \"natureOfJobsInterestedIn\": [\n            \"Full-time\",\n            \"Flexible\"\n        ],\n        \"nameOfJobRolesInterestedIn\": \"Backend Developer, Platform Engineer\",\n        \"otherHelpNeeded\": [\n            \"Training\"\n        ]\n    }\n}",
+          "raw": "{\n    \"title\": \"Generic ITI profile schema\",\n    \"properties\": {\n        \"whatIHave\": {\n            \"age\": 18,\n            \"itiInstitute\": \"ITI Shikoh\",\n            \"itiSpecialization\": [\n                \"NA\"\n            ]\n        },\n        \"whoIAm\": {\n            \"name\": \"Arman\",\n            \"phone\": \"+919645640108\"\n        }\n    }\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -37,13 +37,13 @@
           }
         },
         "url": {
-          "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+          "raw": "{{BASE_URL}}/api/v1/agent/profile/callback",
           "host": [
             "{{BASE_URL}}"
           ],
           "path": [
             "api",
-            "v2",
+            "v1",
             "agent",
             "profile",
             "callback"
@@ -122,7 +122,7 @@
       ]
     },
     {
-      "name": "job",
+      "name": "profile V2",
       "request": {
         "auth": {
           "type": "apikey",
@@ -143,7 +143,195 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n    // postjob -> agentid -> \"1\"\n    // up-postjob -> agentid -> \"200\"\n    // mca-postjob -> agentid -> \"201\"\n    \"agentId\": 200,\n    \"basicInfo\": {\n        \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n        \"jobProviderLocation\": \"Hubballi\",\n        \"hiringManagerName\": \"Ashwin\",\n        \"hiringManagerPhoneNumber\": \"919645640108\",\n        \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n    },\n    \"jobDetails\": {\n        \"title\": \"Fitter\",\n        \"positions\": 10,\n        \"natureOfJob\": \"Apprenticeship\",\n        \"stipendMin\": 12000,\n        \"stipendMax\": 15000,\n        \"salaryMin\": 0,\n        \"salaryMax\": 0,\n        \"taskRateMin\": 0,\n        \"taskRateMax\": 0\n    },\n    \"jobNeeds\": {\n        \"candidateExperienceType\": \"Fresher\",\n        \"minEducationalInstitute\": \"ITI\",\n        \"minQualificationSchool\": \"\",\n        \"minQualificationCollege\": \"\",\n        \"minQualificationVocational\": [\n            \"Fitter (NSQF)\",\n            \"Electrician (NSQF)\"\n        ],\n        \"minQualificationCert\": \"\",\n        \"workExperienceYears\": \"\",\n        \"lastRoleHeld\": \"\"\n    }\n}",
+          "raw": "{\n    \"agentId\": \"up-getjob\",\n    \"role\": \"Fitter\",\n    \"name\": \"Ashwin\",\n    \"phone\": \"919645640108\",\n    \"gender\": \"male\",\n    \"hometown\": \"Bangalore\",\n    \"age\": 26,\n    \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n    \"itiSpecialization\": [\n        \"Additive Manufacturing Technician Three D Printing\",\n        \"Advanced CNC Machining Technician\"\n    ],\n    \"languageSpoken\": [\n        \"Kannada\",\n        \"English\"\n    ],\n    \"totalYearsOfExperience\": 1,\n    \"preferredModeOfWork\": [\n        \"full-time\"\n    ],\n    \"monthlyInHandPreferred\": 18000,\n    \"workHoursPerDay\": 8\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+          "host": [
+            "{{BASE_URL}}"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "agent",
+            "profile",
+            "callback"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "profile V2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"agentId\": \"up-getjob\",\n    \"role\": \"Fitter\",\n    \"name\": \"Ashwin\",\n    \"phone\": \"919645640108\",\n    \"gender\": \"male\",\n    \"hometown\": \"Bangalore\",\n    \"age\": 26,\n    \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n    \"itiSpecialization\": [\n        \"Additive Manufacturing Technician Three D Printing\",\n        \"Advanced CNC Machining Technician\"\n    ],\n    \"languageSpoken\": [\n        \"Kannada\",\n        \"English\"\n    ],\n    \"totalYearsOfExperience\": 1,\n    \"preferredModeOfWork\": [\n        \"full-time\"\n    ],\n    \"monthlyInHandPreferred\": 18000,\n    \"workHoursPerDay\": 8\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "agent",
+                "profile",
+                "callback"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "812"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"32c-+X8ByTeAELQK2VyrgcTQXmN0FmY\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 21 May 2026 06:19:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 284,\n        \"metadata\": {\n            \"name\": \"Ashwin\",\n            \"role\": \"Fitter\",\n            \"gender\": \"male\",\n            \"source\": \"ONEST-AGENT\",\n            \"whoIAm\": {\n                \"name\": \"Ashwin\",\n                \"phone\": \"+919645640108\",\n                \"gender\": \"male\",\n                \"hometown\": \"Bangalore\"\n            },\n            \"agentId\": \"up-getjob\",\n            \"whatIHave\": {\n                \"age\": 26,\n                \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n                \"languageSpoken\": [\n                    \"Kannada\",\n                    \"English\"\n                ],\n                \"itiSpecialization\": [\n                    \"Additive Manufacturing Technician Three D Printing\",\n                    \"Advanced CNC Machining Technician\"\n                ],\n                \"totalYearsOfExperience\": 1\n            },\n            \"whatIWant\": {\n                \"workHoursPerDay\": 8,\n                \"preferredModeOfWork\": [\n                    \"full-time\"\n                ],\n                \"monthlyInHandPreferred\": 18000\n            }\n        },\n        \"status\": \"SUCCESS\",\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-05-21T06:19:23.389Z\",\n        \"updatedAt\": \"2026-05-21T06:19:24.345Z\",\n        \"userId\": \"2c5404e3-352c-4e18-bc39-6b59dc2693d1\",\n        \"profileId\": \"2796d85f-e701-4582-8233-cf6a0fdebd90\"\n    }\n}"
+        },
+        {
+          "name": "profile V2",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"phone\": \"9645640108\",\n    \"name\": \"Ashwin\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{BASE_URL}}/api/v2/agent/profile/callback",
+              "host": [
+                "{{BASE_URL}}"
+              ],
+              "path": [
+                "api",
+                "v2",
+                "agent",
+                "profile",
+                "callback"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "",
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "812"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"32c-+X8ByTeAELQK2VyrgcTQXmN0FmY\""
+            },
+            {
+              "key": "Date",
+              "value": "Thu, 21 May 2026 06:19:24 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [
+            {
+              "expires": "Invalid Date",
+              "domain": "",
+              "path": ""
+            }
+          ],
+          "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 284,\n        \"metadata\": {\n            \"name\": \"Ashwin\",\n            \"role\": \"Fitter\",\n            \"gender\": \"male\",\n            \"source\": \"ONEST-AGENT\",\n            \"whoIAm\": {\n                \"name\": \"Ashwin\",\n                \"phone\": \"+919645640108\",\n                \"gender\": \"male\",\n                \"hometown\": \"Bangalore\"\n            },\n            \"agentId\": \"up-getjob\",\n            \"whatIHave\": {\n                \"age\": 26,\n                \"itiInstitute\": \"GOVERNMENT ITI NELAMANGALA\",\n                \"languageSpoken\": [\n                    \"Kannada\",\n                    \"English\"\n                ],\n                \"itiSpecialization\": [\n                    \"Additive Manufacturing Technician Three D Printing\",\n                    \"Advanced CNC Machining Technician\"\n                ],\n                \"totalYearsOfExperience\": 1\n            },\n            \"whatIWant\": {\n                \"workHoursPerDay\": 8,\n                \"preferredModeOfWork\": [\n                    \"full-time\"\n                ],\n                \"monthlyInHandPreferred\": 18000\n            }\n        },\n        \"status\": \"SUCCESS\",\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-05-21T06:19:23.389Z\",\n        \"updatedAt\": \"2026-05-21T06:19:24.345Z\",\n        \"userId\": \"2c5404e3-352c-4e18-bc39-6b59dc2693d1\",\n        \"profileId\": \"2796d85f-e701-4582-8233-cf6a0fdebd90\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "job v2",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{API_KEY}}",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "x-api-key",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"agentId\": \"up-postjob\",\n    \"basicInfo\": {\n        \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n        \"jobProviderLocation\": \"madiwala\",\n        \"hiringManagerName\": \"Ashwin\",\n        \"hiringManagerPhoneNumber\": \"919645640108\",\n        \"hiringManagerEmail\": \"ashwin@dhiway.com\"\n    },\n    \"jobDetails\": {\n        \"title\": \"Fitter\",\n        \"positions\": 10,\n        \"natureOfJob\": \"Apprenticeship\",\n        \"stipendMin\": 12000,\n        \"stipendMax\": 15000,\n        \"salaryMin\": 0,\n        \"salaryMax\": 0,\n        \"taskRateMin\": 0,\n        \"taskRateMax\": 0\n    },\n    \"jobNeeds\": {\n        \"candidateExperienceType\": \"Fresher\",\n        \"minEducationalInstitute\": \"ITI\",\n        \"minQualificationSchool\": \"\",\n        \"minQualificationCollege\": \"\",\n        \"minQualificationVocational\": [\n            \"Fitter (NSQF)\",\n            \"Electrician (NSQF)\"\n        ],\n        \"minQualificationCert\": \"\",\n        \"workExperienceYears\": \"\",\n        \"lastRoleHeld\": \"\"\n    }\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -234,324 +422,6 @@
           "body": "{\n    \"success\": true,\n    \"data\": {\n        \"id\": 712,\n        \"metadata\": {\n            \"role\": \"Fitter\",\n            \"status\": \"open\",\n            \"agentId\": 200,\n            \"jobNeeds\": {\n                \"lastRoleHeld\": \"\",\n                \"workExperienceYears\": \"\",\n                \"minQualificationCert\": \"\",\n                \"minQualificationSchool\": \"\",\n                \"candidateExperienceType\": \"Fresher\",\n                \"minEducationalInstitute\": \"ITI\",\n                \"minQualificationCollege\": \"\",\n                \"minQualificationVocational\": [\n                    \"Fitter (NSQF)\",\n                    \"Electrician (NSQF)\"\n                ]\n            },\n            \"basicInfo\": {\n                \"jobProviderName\": \"ABC Manufacturing Pvt Ltd\",\n                \"hiringManagerName\": \"Ashwin\",\n                \"hiringManagerEmail\": \"ashwin@dhiway.com\",\n                \"jobProviderLocation\": {\n                    \"gps\": null,\n                    \"tag\": \"Hubballi\",\n                    \"city\": \"Hubballi\",\n                    \"state\": \"\",\n                    \"address\": \"\",\n                    \"country\": \"India\"\n                },\n                \"hiringManagerPhoneNumber\": \"919645640108\"\n            },\n            \"agentTitle\": \"Fitter\",\n            \"jobDetails\": {\n                \"title\": \"Fitter\",\n                \"positions\": 10,\n                \"salaryMax\": 0,\n                \"salaryMin\": 0,\n                \"stipendMax\": 15000,\n                \"stipendMin\": 12000,\n                \"natureOfJob\": \"Apprenticeship\",\n                \"taskRateMax\": 0,\n                \"taskRateMin\": 0\n            },\n            \"jobProviderLocation\": {\n                \"gps\": null,\n                \"tag\": \"Hubballi\",\n                \"city\": \"Hubballi\",\n                \"state\": \"\",\n                \"address\": \"\",\n                \"country\": \"India\"\n            }\n        },\n        \"phone\": \"+919645640108\",\n        \"title\": \"Fitter\",\n        \"createdAt\": \"2026-01-23T05:40:45.414Z\",\n        \"updatedAt\": \"2026-01-23T05:40:45.414Z\"\n    }\n}"
         }
       ]
-    },
-    {
-      "name": "ingest",
-      "request": {
-        "auth": {
-          "type": "apikey",
-          "apikey": [
-            {
-              "key": "value",
-              "value": "{{API_KEY}}",
-              "type": "string"
-            },
-            {
-              "key": "key",
-              "value": "x-api-key",
-              "type": "string"
-            }
-          ]
-        },
-        "method": "POST",
-        "header": [],
-        "body": {
-          "mode": "raw",
-          "raw": "{\n  \"sourceService\": \"SARVAM\",\n  \"agentId\": \"0\",\n  \"eventType\": \"JOB\",\n  \"payload\": {\n    \"title\": \"Assembler\",\n    \"location\": \"Bangalore\",\n    \"salary\": \"15000\",\n    \"experience\": \"2 years\"\n  }\n}\n",
-          "options": {
-            "raw": {
-              "language": "json"
-            }
-          }
-        },
-        "url": {
-          "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-          "host": [
-            "{{BASE_URL}}"
-          ],
-          "path": [
-            "api",
-            "v1",
-            "agent",
-            "inbound",
-            "ingest"
-          ]
-        }
-      },
-      "response": [
-        {
-          "name": "Sarvam Job Sample",
-          "originalRequest": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\n    \"sourceService\": \"SARVAM\",\n    \"app_instance\": \"postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"contact\": {\n            \"phone\": \"na\"\n        },\n        \"Org_name\": \"Karnatak Chamber of Commerce and Industry, KCCI\",\n        \"morejobs\": \"na\",\n        \"Role_Name\": \"Fitter\",\n        \"minimaljd\": \"na\",\n        \"user_name\": \"Priya\",\n        \"right_time\": \"na\",\n        \"Correct_PoC\": \"na\",\n        \"Company_Name\": \"V-Tech\",\n        \"Correct_Area\": \"na\",\n        \"app_instance\": \"up-getjob\",\n        \"Callback_time\": \"na\",\n        \"Location_area\": \"Gokul Road\",\n        \"Monthly_Salary\": \"na\",\n        \"consent_status\": \"na\",\n        \"Org_Leader_Name\": \"Manjunath\",\n        \"WhatsApp_Number\": \"919645640108\",\n        \"Correct_District\": \"na\",\n        \"Correct_PoC_Name\": \"na\",\n        \"WhatsApp_Consent\": \"na\",\n        \"updated_username\": \"na\",\n        \"Location_district\": \"Dharwad\",\n        \"Correct_PoC_Number\": \"na\",\n        \"Number_of_Openings\": \"na\",\n        \"Looking_to_hire_now\": \"na\",\n        \"Org_leader_position\": \"Vice President\",\n        \"correct_details_captured\": \"na\"\n    }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-              "host": [
-                "{{BASE_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "agent",
-                "inbound",
-                "ingest"
-              ]
-            }
-          },
-          "status": "Accepted",
-          "code": 202,
-          "_postman_previewlanguage": null,
-          "header": [
-            {
-              "key": "X-Powered-By",
-              "value": "Express"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "Content-Length",
-              "value": "103"
-            },
-            {
-              "key": "ETag",
-              "value": "W/\"67-2V1RhoSpnqWctYsnVl2cmoiFEJ4\""
-            },
-            {
-              "key": "Date",
-              "value": "Sat, 31 Jan 2026 18:55:38 GMT"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive"
-            },
-            {
-              "key": "Keep-Alive",
-              "value": "timeout=5"
-            }
-          ],
-          "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"3b40b710-ba53-4d94-acc1-7c1df1754719\"\n}"
-        },
-        {
-          "name": "Sarvam Profile Sample",
-          "originalRequest": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n  \"sourceService\": \"SARVAM\",\n  \"app_instance\": \"getjob\",\n  \"eventType\": \"PROFILE\",\n  \"payload\": {\n    \"contact\": {\n      \"phone\": \"9645640108\"\n    },\n    \"skill\": \"Electrician\",\n    \"Job_Type\": \"Full Time\",\n    \"LastRole\": \"Senior Electrician\",\n    \"Org_name\": \"ABC Electrical Works\",\n    \"user_name\": \"Ramesh Kumar\",\n    \"Other_Needs\": \"Accommodation required\",\n    \"Location_area\": \"Whitefield\",\n    \"consent_status\": \"yes\",\n    \"WhatsApp_Number\": \"9645640108\",\n    \"Years_of_workex\": \"5\",\n    \"JobTypes_NearYou\": \"Construction, Maintenance\",\n    \"Location_district\": \"Bengaluru Urban\",\n    \"Job_Seeker_Persona\": \"Skilled Worker\",\n    \"NumberOfJobsNearYou\": \"12\",\n    \"Looking_for_work_now\": \"yes\",\n    \"Job_Aspiration_Role_name\": \"Electrician\",\n    \"Correct_District\": \"Bengaluru\",\n    \"Correct_Area\": \"Whitefield\",\n    \"correct_skill\": \"Electrician\",\n    \"Above18\": \"yes\",\n    \"Age\": \"28\"\n  }\n}\n",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-              "host": [
-                "{{BASE_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "agent",
-                "inbound",
-                "ingest"
-              ]
-            }
-          },
-          "status": "Accepted",
-          "code": 202,
-          "_postman_previewlanguage": null,
-          "header": [
-            {
-              "key": "X-Powered-By",
-              "value": "Express"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "Content-Length",
-              "value": "103"
-            },
-            {
-              "key": "ETag",
-              "value": "W/\"67-94poxmwHxJvj8mmXxnjYzgjKojc\""
-            },
-            {
-              "key": "Date",
-              "value": "Sat, 31 Jan 2026 20:09:26 GMT"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive"
-            },
-            {
-              "key": "Keep-Alive",
-              "value": "timeout=5"
-            }
-          ],
-          "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"6c915757-aefc-4772-bdbb-3db178307f44\"\n}"
-        },
-        {
-          "name": "Dialflow Profile Sample",
-          "originalRequest": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"up-getjob\",\n    \"eventType\": \"PROFILE\",\n    \"payload\": {\n        \"age\": \"23\",\n        \"name\": \"onest-user\",\n        \"phone\": \"919645640108\"\n\n\n    }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-              "host": [
-                "{{BASE_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "agent",
-                "inbound",
-                "ingest"
-              ]
-            }
-          },
-          "status": "Accepted",
-          "code": 202,
-          "_postman_previewlanguage": null,
-          "header": [
-            {
-              "key": "Server",
-              "value": "nginx/1.24.0 (Ubuntu)"
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 24 Feb 2026 10:05:46 GMT"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "Content-Length",
-              "value": "103"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive"
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "Express"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "ETag",
-              "value": "W/\"67-TbCnlz3EHpfgdSuWakJ7LpVJ35E\""
-            }
-          ],
-          "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"e4596a65-35c1-4879-bbeb-acb275b7851d\"\n}"
-        },
-        {
-          "name": "Dialflow Job Sample",
-          "originalRequest": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n    \"sourceService\": \"DIALFLOW\",\n    \"app_instance\": \"up-postjob\",\n    \"eventType\": \"JOB\",\n    \"payload\": {\n        \"name\": \"onest-user\",\n        \"phoneNumber\": \"+919645640108\",\n        \"jobProviderName\": \"Test Provider\",\n        \"title\": \"Fitter\",\n        \"positions\": 1,\n        \"monthly_salary\": 0,\n        \"location\": \"Hubballi\"\n    }\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "{{BASE_URL}}/api/v1/agent/inbound/ingest",
-              "host": [
-                "{{BASE_URL}}"
-              ],
-              "path": [
-                "api",
-                "v1",
-                "agent",
-                "inbound",
-                "ingest"
-              ]
-            }
-          },
-          "status": "Accepted",
-          "code": 202,
-          "_postman_previewlanguage": null,
-          "header": [
-            {
-              "key": "Server",
-              "value": "nginx/1.24.0 (Ubuntu)"
-            },
-            {
-              "key": "Date",
-              "value": "Tue, 24 Feb 2026 10:09:34 GMT"
-            },
-            {
-              "key": "Content-Type",
-              "value": "application/json; charset=utf-8"
-            },
-            {
-              "key": "Content-Length",
-              "value": "103"
-            },
-            {
-              "key": "Connection",
-              "value": "keep-alive"
-            },
-            {
-              "key": "X-Powered-By",
-              "value": "Express"
-            },
-            {
-              "key": "Access-Control-Allow-Origin",
-              "value": "*"
-            },
-            {
-              "key": "ETag",
-              "value": "W/\"67-b5fXLFvW96QMtb3uFqdhU1p0ACM\""
-            }
-          ],
-          "cookie": [],
-          "body": "{\n    \"success\": true,\n    \"message\": \"Payload accepted\",\n    \"inboundPayloadId\": \"bc7505bc-ea09-446a-8253-ae8a8279151d\"\n}"
-        }
-      ]
     }
   ],
   "event": [
@@ -604,7 +474,8 @@
     },
     {
       "key": "primary",
-      "value": ""
+      "value": "",
+      "disabled": true
     }
   ]
 }
